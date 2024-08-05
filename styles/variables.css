@@ -1,0 +1,17 @@
+:root {
+    /* Base */
+    --main-font: "Golos Text", sans-serif;
+    --second-font: "Merriweather", sans-serif;
+    --bg-color-page: #fff;
+    /* Colors */
+    --dark-gray-color: #313131;
+    --red-color: #f54932;
+    --gray-color: rgba(var(--dark-gray-color), 0.7);
+    --dark-blue-color: #3057a2;
+    /* Text */
+    --title-family: var(--second-family);
+    --title-color: var(--primary-color);
+    --title-font-weight: 400;
+    /* Sections */
+    --bg-section: #e9ded4;
+}
