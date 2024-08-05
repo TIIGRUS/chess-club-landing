@@ -1,0 +1,12 @@
+.logo {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    text-transform: uppercase;
+    gap: 5px;
+}
+
+.logo__accent {
+    display: block;
+}
