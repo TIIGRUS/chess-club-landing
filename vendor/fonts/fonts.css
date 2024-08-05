@@ -1,65 +1,65 @@
-/* merriweather-regular - latin */
+/* merriweather-regular - cyrillic */
 @font-face {
     font-display: swap;
     /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
     font-family: 'Merriweather';
     font-style: normal;
     font-weight: 400;
-    src: url('./fonts/merriweather-v30-latin-regular.woff2') format('woff2');
+    src: url('./merriweather-v30-cyrillic-regular.woff2') format('woff2');
     /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 
-/* merriweather-700 - latin */
+/* merriweather-700 - cyrillic */
 @font-face {
     font-display: swap;
     /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
     font-family: 'Merriweather';
     font-style: normal;
     font-weight: 700;
-    src: url('./fonts/merriweather-v30-latin-700.woff2') format('woff2');
+    src: url('./merriweather-v30-cyrillic-700.woff2') format('woff2');
     /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 
-/* golos-text-regular - latin */
+/* golos-text-regular - cyrillic */
 @font-face {
     font-display: swap;
     /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
     font-family: 'Golos Text';
     font-style: normal;
     font-weight: 400;
-    src: url('./fonts/golos-text-v4-latin-regular.woff2') format('woff2');
+    src: url('./golos-text-v4-cyrillic-regular.woff2') format('woff2');
     /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 
-/* golos-text-500 - latin */
+/* golos-text-500 - cyrillic */
 @font-face {
     font-display: swap;
     /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
     font-family: 'Golos Text';
     font-style: normal;
     font-weight: 500;
-    src: url('./fonts/golos-text-v4-latin-500.woff2') format('woff2');
+    src: url('./golos-text-v4-cyrillic-500.woff2') format('woff2');
     /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 
-/* golos-text-600 - latin */
+/* golos-text-600 - cyrillic */
 @font-face {
     font-display: swap;
     /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
     font-family: 'Golos Text';
     font-style: normal;
     font-weight: 600;
-    src: url('./fonts/golos-text-v4-latin-600.woff2') format('woff2');
+    src: url('./golos-text-v4-cyrillic-600.woff2') format('woff2');
     /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 
-/* golos-text-700 - latin */
+/* golos-text-700 - cyrillic */
 @font-face {
     font-display: swap;
     /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
     font-family: 'Golos Text';
     font-style: normal;
     font-weight: 700;
-    src: url('./fonts/golos-text-v4-latin-700.woff2') format('woff2');
+    src: url('./golos-text-v4-cyrillic-700.woff2') format('woff2');
     /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
