@@ -1,3 +1,6 @@
+@import url(./__img/logo__img.css);
+@import url(./__accent/logo__accent.css);
+
 .logo {
     display: inline-flex;
     align-items: center;
@@ -9,13 +12,4 @@
     font-size: 14px;
     line-height: 108%;
     letter-spacing: 0.2px;
-}
-
-.logo__img {
-    height: 27px;
-    width: 80px;
-}
-
-.logo__accent {
-    display: block;
 }

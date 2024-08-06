@@ -1,0 +1,12 @@
+@import url(./__title/header__title.css);
+@import url(./__title-text/header__title-text.css);
+
+.header {
+    position: relative;
+    max-width: 375px;
+    min-height: 812px;
+    margin: 0 auto;
+    padding: 18px var(--section-offset);
+    background-position: center;
+    background-size: cover;
+}

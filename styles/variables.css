@@ -11,7 +11,7 @@
     --dark-blue-color: #3057a2;
     --tudora-color: #595653;
     /* Text */
-    --title-family: var(--second-family);
+    --title-family: var(--second-font);
     --title-text-color: var(--dark-gray-color);
     --title-font-weight: 400;
     --logo-text-color: var(--tudora-color);
