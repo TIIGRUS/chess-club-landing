@@ -5,6 +5,15 @@
     font-weight: 700;
     text-transform: uppercase;
     gap: 5px;
+    color: var(--logo-text-color);
+    font-size: 14px;
+    line-height: 108%;
+    letter-spacing: 0.2px;
+}
+
+.logo__img {
+    height: 27px;
+    width: 80px;
 }
 
 .logo__accent {

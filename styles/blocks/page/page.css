@@ -1,4 +1,7 @@
 .page {
     font-family: var(--main-font);
-    background-color: var(--bg-page);
+    background-color: var(--page-bg);
+    font-size: 18px;
+    color: var(--page-text-color);
+    line-height: 120%;
 }

@@ -2,16 +2,20 @@
     /* Base */
     --main-font: "Golos Text", sans-serif;
     --second-font: "Merriweather", sans-serif;
-    --bg-page: #fff;
+    --page-bg: #fff;
+    --page-text-color: var(--dark-gray-color);
     /* Colors */
     --dark-gray-color: #313131;
     --red-color: #f54932;
     --gray-color: rgba(var(--dark-gray-color), 0.7);
     --dark-blue-color: #3057a2;
+    --tudora-color: #595653;
     /* Text */
     --title-family: var(--second-family);
-    --title-color: var(--primary-color);
+    --title-text-color: var(--dark-gray-color);
     --title-font-weight: 400;
+    --logo-text-color: var(--tudora-color);
     /* Sections */
     --bg-section: #e9ded4;
+    --section-offset: 20px;
 }
