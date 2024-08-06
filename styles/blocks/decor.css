@@ -1,0 +1,20 @@
+.decor:after,
+.decor:before {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+.decor:after {
+    inset: 0;
+    background-image: url(../../images/bg-pattern.png);
+    z-index: -2;
+}
+
+.decor:before {
+    inset: 0;
+    background-color: var(--bg-section);
+    z-index: -1;
+    opacity: 0.8;
+}

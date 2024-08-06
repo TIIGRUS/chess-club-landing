@@ -1,0 +1,8 @@
+.header {
+    background-size: cover;
+    background-position: center;
+    min-height: 812px;
+    max-width: 375px;
+    position: relative;
+    margin: 0 auto;
+}
