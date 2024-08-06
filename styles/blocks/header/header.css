@@ -9,4 +9,9 @@
     padding: 18px var(--section-offset);
     background-position: center;
     background-size: cover;
+    line-height: 130%;
+}
+
+.header__subtitle {
+    margin-bottom: 32px;
 }
