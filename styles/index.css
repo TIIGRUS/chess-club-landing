@@ -1,6 +1,8 @@
 @import url(variables.css);
+@import url(./global.css);
 @import url(./blocks/page/page.css);
 @import url(./blocks/logo/logo.css);
 @import url(./blocks/header/header.css);
 @import url(./blocks/decor.css);
 @import url(./blocks/main-title.css);
+@import url(./blocks/button.css);

@@ -10,6 +10,7 @@
     --gray-color: rgba(var(--dark-gray-color), 0.7);
     --dark-blue-color: #3057a2;
     --tudora-color: #595653;
+    --black-color: #1f1f1f;
     /* Text */
     --title-family: var(--second-font);
     --title-text-color: var(--dark-gray-color);
@@ -18,4 +19,16 @@
     /* Sections */
     --bg-section: #e9ded4;
     --section-offset: 20px;
+    /* Buttons */
+    --btn-border-color: var(--black-color);
+    --btn-font: var(--main-font);
+    /* Button dark */
+    --btn-dark-bg: var(--black-color);
+    --btn-dark-hover-bg: #fbce51;
+    --btn-dark-hover-border-color: var(--btn-dark-hover-bg);
+    --btn-dark-color: #fff;
+    /* Button light */
+    --btn-dark-hover-color: var(--black-color);
+    --btn-light-bg: rgba(255, 255, 255, 0.9);
+    --btn-light-hover-bg: var(--btn-dark-bg);
 }
