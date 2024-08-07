@@ -1,3 +1,6 @@
+@import url(./__section/page__section.css);
+@import url(./__section-title/page__section-title.css);
+
 .page {
     font-family: var(--main-font);
     background-color: var(--page-bg);

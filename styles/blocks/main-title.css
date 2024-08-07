@@ -4,3 +4,8 @@
     color: var(--title-text-color);
     font-family: var(--title-family);
 }
+
+.main-title__accent {
+    font-weight: 700;
+    color: var(--title-accent-color);
+}

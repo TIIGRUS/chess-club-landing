@@ -15,6 +15,7 @@
     --title-family: var(--second-font);
     --title-text-color: var(--dark-gray-color);
     --title-font-weight: 400;
+    --title-accent-color: var(--red-color);
     --logo-text-color: var(--tudora-color);
     /* Sections */
     --bg-section: #e9ded4;

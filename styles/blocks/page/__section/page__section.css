@@ -1,0 +1,4 @@
+.page__section {
+    padding-left: var(--section-offset);
+    padding-right: var(--section-offset);
+}
