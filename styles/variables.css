@@ -2,10 +2,13 @@
     /* Base */
     --main-font: "Golos Text", sans-serif;
     --second-font: "Merriweather", sans-serif;
+    /* Page */
     --page-bg: #fff;
     --page-text-color: var(--dark-gray-color);
+    --page-link-color: var(--dark-blue-color);
     /* Colors */
     --dark-gray-color: #313131;
+    --light-gray-color: rgba(49, 49, 49, 0.7);
     --red-color: #f54932;
     --gray-color: rgba(var(--dark-gray-color), 0.7);
     --dark-blue-color: #3057a2;
