@@ -1,6 +1,6 @@
 .intro {
     display: grid;
-    gap: 24px;
+    gap: 23px;
     margin-top: 48px;
 }
 
@@ -9,7 +9,6 @@
 }
 
 .intro__photo {
-    width: 335px;
-    height: 212px;
+    /* width: 335px;height: 212px; */
     margin: 0 auto;
 }
