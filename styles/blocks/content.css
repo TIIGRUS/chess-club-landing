@@ -12,3 +12,13 @@
 .content__link:hover {
     text-decoration: underline;
 }
+
+.content__title {
+    font-size: 28px;
+    line-height: 136%;
+}
+
+.content__section {
+    padding-left: var(--section-offset);
+    padding-right: var(--section-offset);
+}
