@@ -30,7 +30,7 @@ grid-template-columns: 474px 1fr; */
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-block: 10px;
+    margin-block: 15px 5px;
 }
 
 .intro__photo-game img {
