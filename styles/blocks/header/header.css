@@ -3,13 +3,11 @@
 
 .header {
     position: relative;
-    max-width: 375px;
     /* min-height: 812px; */
     margin: 0 auto;
     padding: 18px var(--section-offset);
-    background-position: center;
-    background-size: cover;
     line-height: 130%;
+    background-color: #E9DED4;
 }
 
 .header__subtitle {

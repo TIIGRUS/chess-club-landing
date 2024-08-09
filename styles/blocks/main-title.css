@@ -3,6 +3,8 @@
     text-transform: uppercase;
     color: var(--title-text-color);
     font-family: var(--title-family);
+    font-size: 36px;
+    line-height: 110%;
 }
 
 .main-title__accent {

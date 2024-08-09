@@ -4,9 +4,13 @@
     gap: 120px 0;
 }
 
-.content__link {
+/* .content__link {
     color: var(--page-link-color);
     text-decoration: none;
+} */
+
+.content__info-text {
+    color: var(--info-text-color);
 }
 
 .content__link:hover {

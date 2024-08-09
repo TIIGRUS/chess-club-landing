@@ -2,6 +2,7 @@
     display: grid;
     gap: 40px 0;
     padding-block-start: 48px;
+    overflow: hidden;
     /* grid-template-areas: "photo title"
 "photo list"
 "photo link";
@@ -12,6 +13,22 @@ display: grid;
 grid-template-columns: 474px 1fr; */
 }
 
+.intro__photo {
+    margin: 0 auto;
+}
+
+.intro__photo-game {
+    /* grid-row: 1/-1; */
+    /* display: flex;
+align-items: center;
+justify-content: center;
+*/
+    margin-block: 15px 0;
+    transform: scale(1.1);
+    transform-origin: center;
+    min-width: 338px;
+}
+
 .intro__invite {
     display: grid;
     gap: 20px;
@@ -19,24 +36,6 @@ grid-template-columns: 474px 1fr; */
 
 .intro__invite-title {
     display: inline;
-}
-
-.intro__photo {
-    margin: 0 auto;
-}
-
-.intro__photo-game {
-    /* grid-row: 1/-1; */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-block: 15px 5px;
-}
-
-.intro__photo-game img {
-    transform: scale(1.1);
-    transform-origin: center;
-    min-width: 338px;
 }
 
 .intro__list {

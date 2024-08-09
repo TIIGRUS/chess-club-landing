@@ -1,15 +1,24 @@
 .decor {
     position: relative;
-    margin: 0;
 }
 
-.decor:after {
+.decor::after,
+.decor::before {
     inset: 0;
-    mix-blend-mode: color-burn;
-    content: '';
     position: absolute;
     width: 100%;
     height: 100%;
-    background-image: url(../../images/decor-pattern.png);
     background-size: cover;
+    background-position: center;
+}
+
+.decor_stamp::before {
+    background-image: url(../../images/stamp-paper.png);
+    content: '';
+}
+
+.decor::after {
+    mix-blend-mode: color-burn;
+    content: '';
+    background-image: url(../../images/decor-pattern.png);
 }
