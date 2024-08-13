@@ -105,25 +105,120 @@
           По всем вопросам обращаться в администрацию к К. Михельсону
         </p>
       </section>
-      <section class="content__section">
-        <h2 class="main-title">Этапы преображения Васюков</h2>
-        <p class="content__info-text">
-          Будущие источники обогащения васюкинцев
-        </p>
-        <div class="slider">
-          <ul class="slider__list">
+      <section class="stages content__section">
+        <article class="content__section-intro">
+          <h2 class="main-title">Этапы преображения Васюков</h2>
+          <p class="content__info-text">
+            Будущие источники обогащения васюкинцев
+          </p>
+        </article>
+        <div class="slider slider-js">
+          <ul class="slider__list stages__slider-list">
+            <li class="slider__item slider__item_active stages__decor">
+              <article class="slider__content decor decor_stamp">
+                <p class="slider__text">
+                  Строительство железнодорожной магистрали Москва-Васюки
+                </p>
+              </article>
+            </li>
+            <li class="slider__item slider__item_active">
+              <article class="slider__content decor decor_stamp">
+                <p class="slider__text">
+                  Открытие фешенебельной гостиницы «Проходная пешка» и других
+                  небоскрёбов
+                </p>
+              </article>
+            </li>
             <li class="slider__item">
               <article class="slider__content decor decor_stamp">
-                <h3 class="slider__text">
-                  Строительство железнодорожной магистрали Москва-Васюки
-                </h3>
+                <p class="slider__text">
+                  Поднятие сельского хозяйства в радиусе на тысячу километров:
+                  производство овощей, фруктов, икры, шоколадных конфет
+                </p>
+              </article>
+            </li>
+            <li class="slider__item">
+              <article class="slider__content decor decor_stamp">
+                <p class="slider__text">Строительство дворца для турнира</p>
+              </article>
+            </li>
+            <li class="slider__item">
+              <article class="slider__content decor decor_stamp">
+                <p class="slider__text">
+                  Размещение гаражей для гостевого автотранспорта
+                </p>
+              </article>
+            </li>
+            <li class="slider__item">
+              <article class="slider__content decor decor_stamp">
+                <p class="slider__text">
+                  Постройка сверхмощной радиостанции для передачи всему миру
+                  сенсационных результатов
+                </p>
+              </article>
+            </li>
+            <li class="slider__item">
+              <article class="slider__content decor decor_stamp">
+                <p class="slider__text">
+                  Создание аэропорта «Большие Васюки» с регулярным отправлением
+                  почтовых самолётов и дирижаблей во все концы света, включая
+                  Лос-Анжелос и Мельбурн
+                </p>
               </article>
             </li>
           </ul>
-          <div class="slider__controls"></div>
+          <div class="slider__controls">
+            <button
+              type="button"
+              class="slider__button slider__button_disabled slider__button_prev"
+              disabled
+            >
+              <svg class="slider__button-icon" width="16" height="16">
+                <use href="./images/icons/sprite.svg#arrow"></use>
+              </svg>
+            </button>
+            <ul class="slider__dots">
+              <li>
+                <button
+                  type="button"
+                  class="slider__button slider__button_type_dot slider__button_active"
+                ></button>
+              </li>
+              <li>
+                <button
+                  type="button"
+                  class="slider__button slider__button_type_dot"
+                ></button>
+              </li>
+              <li>
+                <button
+                  type="button"
+                  class="slider__button slider__button_type_dot"
+                ></button>
+              </li>
+              <li>
+                <button
+                  type="button"
+                  class="slider__button slider__button_type_dot"
+                ></button>
+              </li>
+              <li>
+                <button
+                  type="button"
+                  class="slider__button slider__button_type_dot"
+                ></button>
+              </li>
+            </ul>
+            <button type="button" class="slider__button slider__button_next">
+              <svg class="slider__button-icon" width="16" height="16">
+                <use href="./images/icons/sprite.svg#arrow"></use>
+              </svg>
+            </button>
+          </div>
         </div>
       </section>
     </main>
     <footer></footer>
+    <script src="./scripts/index.js"></script>
   </body>
 </html>

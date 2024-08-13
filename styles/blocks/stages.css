@@ -1,0 +1,24 @@
+.stages {
+    display: flex;
+    flex-direction: column;
+    gap: 20px 0;
+}
+
+.stages__slider-list {
+    margin-block-end: 28px;
+}
+
+.stages__decor::before {
+    background-image: url(../../images/airplane.png);
+    background-size: cover;
+    content: ' ';
+    width: 341px;
+    height: 215px;
+    display: block;
+    z-index: 1;
+    position: relative;
+    margin-bottom: -86px;
+    margin-left: auto;
+    left: 10px;
+    top: -13px
+}

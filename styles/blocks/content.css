@@ -4,11 +4,6 @@
     gap: 120px 0;
 }
 
-/* .content__link {
-    color: var(--page-link-color);
-    text-decoration: none;
-} */
-
 .content__info-text {
     color: var(--info-text-color);
 }
@@ -25,4 +20,10 @@
 .content__section {
     padding-left: var(--section-offset);
     padding-right: var(--section-offset);
+}
+
+.content__section-intro {
+    display: flex;
+    flex-direction: column;
+    gap: 12px 0;
 }

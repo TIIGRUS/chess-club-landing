@@ -13,6 +13,7 @@
     --dark-blue-color: #3057a2;
     --tudora-color: #595653;
     --black-color: #1f1f1f;
+    --yellow-color: #fbce51;
     /* Text */
     --title-family: var(--second-font);
     --title-text-color: var(--dark-gray-color);
@@ -28,11 +29,16 @@
     --btn-font: var(--main-font);
     /* Button dark */
     --btn-dark-bg: var(--black-color);
-    --btn-dark-hover-bg: #fbce51;
+    --btn-dark-hover-bg: var(--yellow-color);
     --btn-dark-hover-border-color: var(--btn-dark-hover-bg);
     --btn-dark-color: #fff;
     /* Button light */
     --btn-dark-hover-color: var(--black-color);
     --btn-light-bg: rgba(255, 255, 255, 0.9);
     --btn-light-hover-bg: var(--btn-dark-bg);
+    /* Slider */
+    --slider-btn-bg: var(--dark-gray-color);
+    --slider-btn-bg-disabled: #D6D6D6;
+    --slider-btn-bg-hover: var(--yellow-color);
+    --slider-dot-bg: #D9D9D9;
 }
