@@ -9,7 +9,7 @@
     --dark-gray-color: #313131;
     --light-gray-color: rgba(49, 49, 49, 0.7);
     --red-color: #f54932;
-    --gray-color: rgba(var(--dark-gray-color), 0.7);
+    --gray-color: rgba(49, 49, 49, 0.6);
     --dark-blue-color: #3057a2;
     --tudora-color: #595653;
     --black-color: #1f1f1f;
@@ -36,6 +36,11 @@
     --btn-dark-hover-color: var(--black-color);
     --btn-light-bg: rgba(255, 255, 255, 0.9);
     --btn-light-hover-bg: var(--btn-dark-bg);
+    /* Button blue */
+    --btn-info-border-color: var(--dark-blue-color);
+    --btn-info-color: var(--dark-blue-color);
+    --btn-info-hover-bg: var(--dark-blue-color);
+    --btn-info-hover-color-text: #fff;
     /* Slider */
     --slider-btn-bg: var(--dark-gray-color);
     --slider-btn-bg-disabled: #D6D6D6;

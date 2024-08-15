@@ -1,0 +1,40 @@
+.member {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.member__photo-wrapper {
+    border-radius: 100%;
+    overflow: hidden;
+    width: 244px;
+    height: 244px;
+    margin-block-end: 10px;
+}
+
+.member__info {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 17px;
+}
+
+.member__photo {
+    position: relative;
+    transform: scale(0.9) translateY(6px);
+}
+
+.member__name {
+    font-weight: 600;
+    font-size: 24px;
+}
+
+.member__rank {
+    font-size: 20px;
+    opacity: 0.6;
+}
+
+.members__slider-list {
+    margin-block: 40px;
+}

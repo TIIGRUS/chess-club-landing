@@ -36,3 +36,20 @@
     color: #fff;
     background-color: var(--btn-light-hover-bg);
 }
+
+.button_size_s {
+    border-width: 1px;
+    line-height: 120%;
+    padding: 7px 12px;
+    min-height: 35px;
+}
+
+.button_theme_info {
+    color: var(--btn-info-color);
+    border-color: var(--btn-info-border-color);
+}
+
+.button_theme_info:hover {
+    background-color: var(--btn-info-hover-bg);
+    color: var(--btn-info-hover-color-text);
+}
