@@ -1,7 +1,6 @@
 .intro {
     display: grid;
     gap: 40px 0;
-    padding-block-start: 48px;
     overflow: hidden;
     /* grid-template-areas: "photo title"
 "photo list"

@@ -2,12 +2,10 @@
 @import url(./__title-text/header__title-text.css);
 
 .header {
-    position: relative;
-    /* min-height: 812px; */
     margin: 0 auto;
-    padding: 18px var(--section-offset);
+    padding-block: 18px 0;
     line-height: 130%;
-    background-color: #E9DED4;
+    margin-block-end: 48px;
 }
 
 .header__subtitle {
@@ -18,4 +16,44 @@
     display: flex;
     flex-direction: column;
     gap: 14px;
+}
+
+.header__content {
+    position: relative;
+    z-index: 2;
+}
+
+.header__composition {
+    margin-inline: calc(-1 * (var(--section-offset)));
+    position: relative;
+    margin-block-start: 15px;
+    padding-block-end: 20px;
+}
+
+.header__composition-horse {
+    position: absolute;
+    object-fit: cover;
+    width: 100px;
+    height: 137px;
+    z-index: 2;
+    bottom: 15px;
+    left: 15px;
+    right: 0;
+    margin: 0 auto;
+}
+
+.header__composition-city {
+    z-index: 1;
+    position: relative;
+}
+
+.header__circle {
+    position: absolute;
+    top: -37%;
+    left: -20px;
+    right: 0;
+    width: 350px;
+    height: 350px;
+    margin: 0 auto;
+    z-index: 0;
 }

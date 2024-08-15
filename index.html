@@ -9,43 +9,76 @@
     <link rel="stylesheet" href="./styles/index.css" />
   </head>
   <body class="page">
-    <header class="header decor">
-      <a class="logo">
-        <img src="./images/icons/logo.svg" class="logo__img" alt="Логотип" />
-        <span>
-          <span class="logo__accent">Клуб</span>
-          четырех коней
-        </span>
-      </a>
-      <h1 class="main-title header__title">
-        <span class="header__title-text">Превратите уездный город</span>
-        <span class="header__title-text header__title-text_direction_center"
-          >в столицу</span
-        >
-        <span class="header__title-text header__title-text_direction_right"
-          >земного шара</span
-        >
-      </h1>
-      <p class="header__subtitle">
-        Оплатите взнос на телеграммы для организации Международного васюкинского
-        турнира по шахматам
-      </p>
-      <div class="header__buttons">
-        <a href="#" class="button button_theme_dark">
-          Поддержать шахматную мысль
+    <header class="header decor page__section page__section_has_bg">
+      <div class="header__content">
+        <a class="logo">
+          <img src="./images/icons/logo.svg" class="logo__img" alt="Логотип" />
+          <span>
+            <span class="logo__accent">Клуб</span>
+            четырех коней
+          </span>
         </a>
-        <button type="button" class="button button_theme_light">
-          Подробнее о турнире
-        </button>
+        <h1 class="main-title header__title">
+          <span class="header__title-text">Превратите уездный город</span>
+          <span class="header__title-text header__title-text_direction_center"
+            >в столицу</span
+          >
+          <span class="header__title-text header__title-text_direction_right"
+            >земного шара</span
+          >
+        </h1>
+        <p class="header__subtitle">
+          Оплатите взнос на телеграммы для организации Международного
+          васюкинского турнира по шахматам
+        </p>
+        <div class="header__buttons">
+          <a href="#" class="button button_theme_dark">
+            Поддержать шахматную мысль
+          </a>
+          <button type="button" class="button button_theme_light">
+            Подробнее о турнире
+          </button>
+        </div>
       </div>
-      <!-- <span
-        >Дело помощи утопающим — дело рук самих утопающих! Шахматы двигают
-        вперёд не только культуру, но и экономику! Лёд тронулся, господа
-        присяжные заседатели!</span
-      > -->
+      <div class="header__composition">
+        <picture>
+          <source
+            srcset="./images/composition-city.png"
+            media="(min-width: 1024px)"
+            type="image/jpeg"
+          />
+          <img
+            src="./images/mobile-composition-city.png"
+            class="header__composition-city"
+            alt=""
+          />
+        </picture>
+        <picture>
+          <source
+            srcset="./images/horse-figure.png"
+            media="(min-width: 992px)"
+            type="image/jpeg"
+            width="154"
+            height="244"
+          />
+          <!-- <source srcset="./images/mobile-horse-figure.png"/ type="image/jpeg"
+          width="86" height="121" media="(min-width: 375px)"> -->
+          <img
+            src="./images/mobile-horse-figure.png"
+            alt=""
+            class="header__composition-horse"
+          />
+        </picture>
+        <img src="./images/circle.svg" class="header__circle" alt="" />
+        <div class="running-line">
+          Дело помощи утопающим — дело рук самих утопающих! Шахматы двигают
+          вперёд не только культуру, но и экономику! Лёд тронулся, господа
+          присяжные заседатели!
+        </div>
+      </div>
     </header>
     <main class="content">
-      <section class="intro content__section">
+      <section class="intro page__section">
         <article class="intro__invite">
           <h2 class="main-title intro__invite-title content__title">
             Чтобы поддержать Международный васюкинский турнир
@@ -105,7 +138,7 @@
           По всем вопросам обращаться в администрацию к К. Михельсону
         </p>
       </section>
-      <section class="stages content__section">
+      <section class="stages page__section">
         <article class="content__section-intro">
           <h2 class="main-title">Этапы преображения Васюков</h2>
           <p class="content__info-text">
@@ -115,51 +148,51 @@
         <div class="slider slider-js">
           <ul class="slider__list stages__slider-list">
             <li class="slider__item slider__item_active stages__decor">
-              <article class="slider__content decor decor_stamp">
-                <p class="slider__text">
+              <article class="slider__content decor decor_stamp stage__card">
+                <p class="stage__card-text">
                   Строительство железнодорожной магистрали Москва-Васюки
                 </p>
               </article>
             </li>
             <li class="slider__item slider__item_active">
-              <article class="slider__content decor decor_stamp">
-                <p class="slider__text">
+              <article class="slider__content decor decor_stamp stage__card">
+                <p class="stage__card-text">
                   Открытие фешенебельной гостиницы «Проходная пешка» и других
                   небоскрёбов
                 </p>
               </article>
             </li>
             <li class="slider__item">
-              <article class="slider__content decor decor_stamp">
-                <p class="slider__text">
+              <article class="slider__content decor decor_stamp stage__card">
+                <p class="stage__card-text">
                   Поднятие сельского хозяйства в радиусе на тысячу километров:
                   производство овощей, фруктов, икры, шоколадных конфет
                 </p>
               </article>
             </li>
             <li class="slider__item">
-              <article class="slider__content decor decor_stamp">
-                <p class="slider__text">Строительство дворца для турнира</p>
+              <article class="slider__content decor decor_stamp stage__card">
+                <p class="stage__card-text">Строительство дворца для турнира</p>
               </article>
             </li>
             <li class="slider__item">
-              <article class="slider__content decor decor_stamp">
-                <p class="slider__text">
+              <article class="slider__content decor decor_stamp stage__card">
+                <p class="stage__card-text">
                   Размещение гаражей для гостевого автотранспорта
                 </p>
               </article>
             </li>
             <li class="slider__item">
-              <article class="slider__content decor decor_stamp">
-                <p class="slider__text">
+              <article class="slider__content decor decor_stamp stage__card">
+                <p class="stage__card-text">
                   Постройка сверхмощной радиостанции для передачи всему миру
                   сенсационных результатов
                 </p>
               </article>
             </li>
             <li class="slider__item">
-              <article class="slider__content decor decor_stamp">
-                <p class="slider__text">
+              <article class="slider__content decor decor_stamp stage__card">
+                <p class="stage__card-text">
                   Создание аэропорта «Большие Васюки» с регулярным отправлением
                   почтовых самолётов и дирижаблей во все концы света, включая
                   Лос-Анжелос и Мельбурн
@@ -217,7 +250,7 @@
           </div>
         </div>
       </section>
-      <section class="members content__section">
+      <section class="members page__section">
         <h2 class="main-title">Участники турнира</h2>
         <div class="slider slider-js">
           <ul class="slider__list members__slider-list">
@@ -265,7 +298,13 @@
         </div>
       </section>
     </main>
-    <footer></footer>
+    <footer class="footer page__section page__section_has_bg">
+      <p class="footer__description">
+        Все персонажи, события и цитаты являются вымышленными и не принадлежат
+        создателям сайта. С подробностями можно познакомиться в главе XXXIV
+        романа Ильи Ильфа и Евгения Петрова «Двенадцать стульев».
+      </p>
+    </footer>
     <script src="./scripts/index.js"></script>
   </body>
 </html>

@@ -6,3 +6,11 @@
     line-height: 120%;
     font-weight: 400;
 }
+
+.page__section {
+    padding-inline: var(--section-offset);
+}
+
+.page__section_has_bg {
+    background-color: var(--section-bg);
+}

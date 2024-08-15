@@ -1,0 +1,10 @@
+.running-line {
+    background-color: var(--red-color);
+    height: 38px;
+    text-wrap: nowrap;
+    overflow: hidden;
+    max-width: 375px;
+    position: absolute;
+    bottom: 0;
+    z-index: 2;
+}

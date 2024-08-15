@@ -22,4 +22,5 @@
     mix-blend-mode: color-burn;
     content: '';
     background-image: url(../../images/decor-pattern.png);
+    z-index: 1;
 }

@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <svg xmlns="http://www.w3.org/2000/svg">
- <defs>
-    <symbol id="arrow" viewBox="0 0 12 20">
-        <path d="M1.4618 1.53839L9.92334 9.99993L1.4618 18.4615" stroke="white" stroke-width="2" stroke-linecap="square" fill="none"/>
-    </symbol>
-    <symbol id="" viewBox="0 0 0 0">
-    </symbol>
- </defs>
+    <defs>
+        <symbol id="arrow" viewBox="0 0 12 20">
+            <path d="M1.4618 1.53839L9.92334 9.99993L1.4618 18.4615" stroke="white" stroke-width="2"
+                stroke-linecap="square" fill="none" />
+        </symbol>
+        <symbol id="" viewBox="0 0 0 0">
+        </symbol>
+    </defs>
 </svg>
