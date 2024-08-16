@@ -52,8 +52,7 @@
     top: -37%;
     left: -20px;
     right: 0;
-    width: 350px;
-    height: 350px;
+    width: clamp(350px, 80%, 660px);
     margin: 0 auto;
     z-index: 0;
 }
