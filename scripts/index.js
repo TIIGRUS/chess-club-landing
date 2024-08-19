@@ -20,4 +20,28 @@ document.addEventListener('DOMContentLoaded', function () {
     // }
 
     // setInterval(switchSlide, 2000);
+
+    // Running Line
+    // const resizeWidthRunningLine = new ResizeObserver((entries) => {
+    //     for (const entry of entries) {
+    //         // calculateAnimation(entry.contentRect.width)
+    //     }
+    // });
+
+    // const runningLine = document.querySelector('.running-line');
+    // const runningLineList = document.querySelector('.running-line__list');
+
+    // function calculateAnimation() {
+    //     // Ширина видимого контейнера, внутри которого будет прокручиваться список.
+    //     const containerWidth = runningLine.offsetWidth;
+    //     // Получаем полную ширину списка с контентом, который будет прокручиваться.
+    //     const contentWidth = runningLineList.scrollWidth;
+    //     // Рассчитываем время анимации: больше ширина контента – больше время
+    //     const animationDuration = (contentWidth + containerWidth) / 100; // чем больше делитель, тем быстрее строка.
+
+    //     // Применяем рассчитанное время к анимации
+    //     runningLineList.style.animationDuration = `${animationDuration}s`;
+    // }
+
+    // resizeWidthRunningLine.observe(runningLine);
 });

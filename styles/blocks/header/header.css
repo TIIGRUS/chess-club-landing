@@ -6,6 +6,7 @@
     padding-block: 18px 0;
     line-height: 130%;
     margin-block-end: 48px;
+    overflow: hidden;
 }
 
 .header__subtitle {

@@ -11,3 +11,14 @@
         transform: rotate(360deg);
     }
 }
+
+@keyframes moving-right-left {
+    0% {
+        transform: translateX(0);
+        padding-left: 100%;
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
