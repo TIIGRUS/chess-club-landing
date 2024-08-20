@@ -1,0 +1,11 @@
+.header__composition-horse {
+    position: absolute;
+    object-fit: cover;
+    width: 100px;
+    height: 137px;
+    z-index: 2;
+    bottom: 15px;
+    left: 15px;
+    right: 0;
+    margin: 0 auto;
+}

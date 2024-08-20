@@ -1,0 +1,6 @@
+.header__composition {
+    margin-inline: calc(-1 * (var(--section-offset)));
+    position: relative;
+    margin-block-start: 15px;
+    padding-block-end: 20px;
+}
