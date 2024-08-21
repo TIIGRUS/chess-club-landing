@@ -1,3 +1,10 @@
 .header__subtitle {
     margin-bottom: 32px;
 }
+
+@media (min-width: 1300px) {
+    .header__subtitle {
+        text-align: center;
+        margin-bottom: 40px;
+    }
+}

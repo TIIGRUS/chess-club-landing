@@ -9,39 +9,50 @@
     <link rel="stylesheet" href="./styles/index.css" />
   </head>
   <body class="page">
-    <header class="header decor page__section page__section_has_bg">
-      <div class="header__content">
-        <a class="logo">
-          <img src="./images/icons/logo.svg" class="logo__img" alt="Логотип" />
-          <span>
-            <span class="logo__accent">Клуб</span>
-            четырех коней
-          </span>
-        </a>
-        <h1 class="main-title header__title">
-          <span class="header__title-text">Превратите уездный город</span>
-          <span class="header__title-text header__title-text_direction_center"
-            >в столицу</span
-          >
-          <span class="header__title-text header__title-text_direction_right"
-            >земного шара</span
-          >
-        </h1>
-        <p class="header__subtitle">
-          Оплатите взнос на телеграммы для организации Международного
-          васюкинского турнира по шахматам
-        </p>
-        <div class="header__buttons">
-          <a href="#" class="button button_theme_dark">
-            Поддержать шахматную мысль
+    <header class="header decor">
+      <div class="header__content-wrapper page__section">
+        <article class="header__content">
+          <a class="logo">
+            <img
+              src="./images/icons/logo.svg"
+              class="logo__img"
+              alt="Логотип"
+            />
+            <span>
+              <span class="logo__accent">Клуб</span>
+              четырех коней
+            </span>
           </a>
-          <button type="button" class="button button_theme_light">
-            Подробнее о турнире
-          </button>
-        </div>
+          <h1 class="main-title header__title">
+            <span class="header__title-text">Превратите уездный город</span>
+            <span class="header__title-text header__title-text_direction_center"
+              >в столицу</span
+            >
+            <span class="header__title-text header__title-text_direction_right"
+              >земного шара</span
+            >
+          </h1>
+          <p class="header__subtitle">
+            Оплатите взнос на телеграммы для организации Международного
+            васюкинского турнира по шахматам
+          </p>
+          <div class="header__buttons">
+            <a href="#" class="button button_theme_dark">
+              Поддержать шахматную мысль
+            </a>
+            <button type="button" class="button button_theme_light">
+              Подробнее о турнире
+            </button>
+          </div>
+        </article>
       </div>
       <div class="header__composition">
         <picture>
+          <source
+            srcset="./images/composition-city-xl.png"
+            media="(min-width: 1400px)"
+            type="image/jpeg"
+          />
           <source
             srcset="./images/composition-city.png"
             media="(min-width: 1024px)"
@@ -66,9 +77,16 @@
           <img
             src="./images/mobile-horse-figure.png"
             alt=""
-            class="header__composition-horse"
+            class="header__composition-horse header__chess-figure"
           />
         </picture>
+        <img
+          src="./images/front-figure.png"
+          class="header__front-figure header__chess-figure"
+          width="82"
+          height="122"
+          alt=""
+        />
         <img src="./images/circle.svg" class="header__circle rotation" alt="" />
       </div>
       <div class="running-line">

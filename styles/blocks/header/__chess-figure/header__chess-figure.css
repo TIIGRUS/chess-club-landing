@@ -1,0 +1,5 @@
+.header__chess-figure {
+    position: absolute;
+    object-fit: cover;
+    z-index: 2;
+}

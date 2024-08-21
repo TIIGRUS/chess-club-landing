@@ -2,9 +2,9 @@
 @import url(./global.css);
 @import url(./blocks/page.css);
 @import url(./blocks/logo/logo.css);
-@import url(./blocks/header/header.css);
 @import url(./blocks/decor.css);
 @import url(./blocks/main-title.css);
+@import url(./blocks/header/header.css);
 @import url(./blocks/button.css);
 @import url(./blocks/intro.css);
 @import url(./blocks/content.css);

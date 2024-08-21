@@ -2,3 +2,9 @@
     text-align: center;
     padding-left: 7px;
 }
+
+@media (min-width: 1300px) {
+    .header__title-text_direction_center {
+        padding-left: 0;
+    }
+}

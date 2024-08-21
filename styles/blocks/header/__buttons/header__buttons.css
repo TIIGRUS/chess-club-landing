@@ -3,3 +3,11 @@
     flex-direction: column;
     gap: 14px;
 }
+
+@media (min-width: 1300px) {
+    .header__buttons {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+    }
+}

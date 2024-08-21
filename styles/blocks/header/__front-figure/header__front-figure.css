@@ -1,0 +1,11 @@
+.header__front-figure {
+    width: 82px;
+    bottom: 45px;
+    right: 3.4%;
+}
+
+@media (min-width: 1400px) {
+    .header__front-figure {
+        right: 11.5%;
+    }
+}

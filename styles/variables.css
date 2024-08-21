@@ -25,6 +25,7 @@
     /* Sections */
     --section-bg: var(--white-coffee);
     --section-offset: 20px;
+    --section-offset-xl: 72px;
     /* Buttons */
     --btn-border-color: var(--black-color);
     --btn-font: var(--main-font);

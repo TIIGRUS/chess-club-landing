@@ -3,7 +3,17 @@
     top: -37%;
     left: -20px;
     right: 0;
-    width: clamp(350px, 80%, 660px);
+    /* width: clamp(350px, 80%, 660px); */
+    width: clamp(350px, 80%, 780px);
     margin: 0 auto;
     z-index: 0;
+}
+
+@media (min-width: 1300px) {
+    .header__circle {
+        left: auto;
+        right: -25px;
+        top: auto;
+        bottom: 8%;
+    }
 }

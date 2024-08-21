@@ -14,3 +14,9 @@
 .page__section_has_bg {
     background-color: var(--section-bg);
 }
+
+@media (min-width: 1300px) {
+    .page__section {
+        padding-inline: var(--section-offset-xl);
+    }
+}

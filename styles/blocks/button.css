@@ -53,3 +53,13 @@
     background-color: var(--btn-info-hover-bg);
     color: var(--btn-info-hover-color-text);
 }
+
+@media (min-width: 1300px) {
+    .button:not(.button_size_s) {
+        padding: 13px 50px;
+    }
+
+    .button_theme_light {
+        background-color: transparent;
+    }
+}

@@ -1,6 +1,22 @@
 .header__composition {
-    margin-inline: calc(-1 * (var(--section-offset)));
+    /* margin-inline: calc(-1 * (var(--section-offset))); */
     position: relative;
     margin-block-start: 15px;
     padding-block-end: 20px;
+}
+
+@media (min-width: 1300px) {
+    .header__composition {
+        position: absolute;
+        left: 0;
+        bottom: 35px;
+        margin: 0 auto;
+        max-width: 1630px;
+    }
+}
+
+@media (min-width: 1400px) {
+    .header__composition {
+        right: -20px;
+    }
 }
