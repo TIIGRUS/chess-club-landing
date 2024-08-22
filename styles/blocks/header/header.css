@@ -19,7 +19,7 @@
     background-color: var(--section-bg);
 }
 
-@media (min-width: 1300px) {
+@media (min-width: 768px) {
     .header {
         padding-block: 28px 0;
     }
@@ -29,6 +29,12 @@
         grid-template-columns: 542px 1fr;
         max-inline-size: 1366px;
         margin: 0 auto;
+        min-height: 660px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .header__content-wrapper {
         min-height: 732px;
     }
 }

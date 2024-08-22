@@ -4,3 +4,9 @@
 .header__title-text {
     display: block;
 }
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .header__title-text {
+        display: inline;
+    }
+}

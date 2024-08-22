@@ -2,3 +2,20 @@
     z-index: 1;
     position: relative;
 }
+
+/* @media (min-width: 768px) {
+    .header__composition-city {
+        margin: 0 auto;
+        display: block;
+        min-width: 1630px;
+        width: auto;
+        transform: translateX(-50%);
+        left: 51%;
+    }
+} */
+
+/* @media (min-width: 1400px) {
+    .header__composition-city {
+        left: 50%;
+    }
+} */

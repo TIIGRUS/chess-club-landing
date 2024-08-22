@@ -2,6 +2,22 @@
     width: 82px;
     bottom: 45px;
     right: 3.4%;
+    /* right: 44px; */
+    opacity: 0;
+}
+
+@media (min-width: 768px) {
+    .header__front-figure {
+        opacity: 1;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1300px) {
+    .header__front-figure {
+        bottom: 5%;
+        width: 60px;
+        height: 90px;
+    }
 }
 
 @media (min-width: 1400px) {
