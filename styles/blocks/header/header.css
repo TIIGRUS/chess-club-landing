@@ -36,5 +36,6 @@
 @media (min-width: 1024px) {
     .header__content-wrapper {
         min-height: 732px;
+        position: relative;
     }
 }

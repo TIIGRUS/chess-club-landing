@@ -12,14 +12,8 @@
 @media (min-width: 768px) {
     .header__circle {
         left: auto;
-        right: -30px;
+        right: -15px;
         top: auto;
         bottom: 8%;
-    }
-}
-
-@media (min-width: 1400px) {
-    .header__circle {
-        right: 7%;
     }
 }

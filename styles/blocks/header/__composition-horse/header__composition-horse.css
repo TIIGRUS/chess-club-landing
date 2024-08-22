@@ -10,23 +10,17 @@
 @media (min-width: 768px) and (max-width: 1300px) {
     .header__composition-horse {
         bottom: -25px;
-        left: 41%;
+        left: 120px;
     }
 }
 
 @media (min-width: 1300px) {
     .header__composition-horse {
-        width: 185px;
+        width: 190px;
         height: 220px;
         left: auto;
-        right: 25%;
+        right: 25.5%;
         margin: 0;
-        bottom: 25px;
-    }
-}
-
-@media (min-width: 1400px) {
-    .header__composition-horse {
-        right: 29.5%;
+        bottom: 20px;
     }
 }

@@ -3,16 +3,16 @@
     position: relative;
 }
 
-/* @media (min-width: 768px) {
+@media (min-width: 768px) {
     .header__composition-city {
         margin: 0 auto;
         display: block;
         min-width: 1630px;
         width: auto;
         transform: translateX(-50%);
-        left: 51%;
+        left: 50%;
     }
-} */
+}
 
 /* @media (min-width: 1400px) {
     .header__composition-city {

@@ -1,8 +1,7 @@
 .header__front-figure {
     width: 82px;
-    bottom: 45px;
-    right: 3.4%;
-    /* right: 44px; */
+    right: calc(105px + 12vw);
+    bottom: 18px;
     opacity: 0;
 }
 
@@ -14,14 +13,14 @@
 
 @media (min-width: 768px) and (max-width: 1300px) {
     .header__front-figure {
-        bottom: 5%;
         width: 60px;
         height: 90px;
     }
 }
 
-@media (min-width: 1400px) {
+@media (min-width: 1300px) {
     .header__front-figure {
-        right: 11.5%;
+        right: 55px;
+        bottom: 40px;
     }
 }

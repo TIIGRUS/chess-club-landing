@@ -9,11 +9,10 @@
     .header__composition {
         position: absolute;
         left: 0;
-        bottom: 35px;
+        bottom: 40px;
         margin: 0 auto;
-        max-width: 1630px;
-        /* max-width: 1366px;
-        padding-block-end: 25px; */
+        max-width: 1366px;
+        right: -20px;
     }
 }
 
