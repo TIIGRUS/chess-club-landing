@@ -1,15 +1,8 @@
 .intro {
+    --color-border-divider: #D0D0D0;
     display: grid;
     gap: 40px 0;
     overflow: hidden;
-    /* grid-template-areas: "photo title"
-"photo list"
-"photo link";
-gap: 0 44px;
-align-items: flex-start;
-justify-items: flex-start;
-display: grid;
-grid-template-columns: 474px 1fr; */
 }
 
 .intro__photo {
@@ -61,7 +54,7 @@ grid-template-columns: 474px 1fr; */
 }
 
 .intro__list-item:not(:last-child) {
-    border-bottom: 2px solid #D0D0D0;
+    border-bottom: 2px solid var(--color-border-divider);
 }
 
 .intro__list-item:first-child {
@@ -75,9 +68,11 @@ grid-template-columns: 474px 1fr; */
 .intro__list-accent {
     font-weight: 600;
     color: var(--dark-gray-color);
+    display: inline-flex;
+    gap: 12px;
 }
 
-.intro__list-accent_crossed {
+.intro__text-crossed {
     text-decoration: line-through;
     text-decoration-color: var(--red-color);
     text-decoration-thickness: 2px;
@@ -86,12 +81,68 @@ grid-template-columns: 474px 1fr; */
 @media (min-width: 768px) {
     .intro__invite {
         display: block;
+        grid-area: invite;
     }
 
     .intro__figure-photo {
         float: right;
         width: 285px;
         margin-left: 25px;
+    }
+
+    .intro__photo-game {
+        min-width: 100%;
+    }
+
+    .intro {
+        grid-template-areas: "invite invite"
+            "photo title"
+            "list list"
+            "info info";
+        gap: 22px;
+        align-items: flex-start;
+        justify-items: flex-start;
+        display: grid;
+        grid-template-columns: 35% 1fr;
+    }
+
+    .intro__list-title {
+        margin-block: 15px 5px;
+        grid-area: title;
+    }
+
+    .intro__list {
+        grid-area: list;
+        width: 100%;
+    }
+
+    .intro__info {
+        grid-area: info;
+    }
+
+    .intro__figure-game {
+        grid-area: photo;
+    }
+
+    .intro__list-item {
+        display: grid;
+        grid-template-columns: minmax(41%, 295px) 1fr;
+        grid-template-rows: minmax(53px, 1fr);
+        gap: 12px 10px;
+        padding-block: 0;
+        align-items: center;
+    }
+
+    .intro__list-item:first-child {
+        padding-top: 0;
+    }
+
+    .intro__list-accent {
+        border-left: 2px solid var(--color-border-divider);
+        padding-inline-start: 16px;
+        padding-block: 13px;
+        height: 100%;
+        align-items: center;
     }
 }
 
@@ -100,6 +151,14 @@ grid-template-columns: 474px 1fr; */
         width: 394px;
         margin-left: 50px;
     }
+
+    .intro {
+        grid-template-areas: "invite invite"
+            "photo title"
+            "photo list"
+            "photo info";
+        gap: 43px;
+    }
 }
 
 @media (min-width: 1300px) {
@@ -107,5 +166,9 @@ grid-template-columns: 474px 1fr; */
         content: '';
         display: block;
         margin-block-start: 28px;
+    }
+
+    .intro {
+        grid-template-columns: 474px 1fr;
     }
 }

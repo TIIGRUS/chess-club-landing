@@ -27,4 +27,8 @@
     .content__title {
         font-size: 36px;
     }
+
+    .content__info-text {
+        font-size: 20px;
+    }
 }
