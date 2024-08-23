@@ -9,6 +9,8 @@
 
 .page__section {
     padding-inline: var(--section-offset);
+    max-inline-size: var(--section-max-width);
+    margin: 0 auto;
 }
 
 .page__section_has_bg {
