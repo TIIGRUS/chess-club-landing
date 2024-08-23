@@ -1,5 +1,6 @@
 .header__subtitle {
     margin-bottom: 32px;
+    grid-area: subtitle;
 }
 
 @media (min-width: 1300px) {

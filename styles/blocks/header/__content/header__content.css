@@ -2,3 +2,16 @@
     position: relative;
     z-index: 2;
 }
+
+@media (min-width: 768px) {
+    .header__content {
+        display: grid;
+        grid-template-areas:
+            "logo ."
+            "title ."
+            "subtitle ."
+            "buttons .";
+        grid-template-columns: 542px 1fr;
+        justify-items: flex-start;
+    }
+}
