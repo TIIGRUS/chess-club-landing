@@ -29,5 +29,6 @@
 @media (min-width: 1024px) {
     .header {
         min-height: 760px;
+        margin-block-end: 80px;
     }
 }

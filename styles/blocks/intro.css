@@ -14,14 +14,10 @@ grid-template-columns: 474px 1fr; */
 
 .intro__photo {
     margin: 0 auto;
+    border-radius: 100%;
 }
 
 .intro__photo-game {
-    /* grid-row: 1/-1; */
-    /* display: flex;
-align-items: center;
-justify-content: center;
-*/
     margin-block: 15px 0;
     transform: scale(1.1);
     transform-origin: center;
@@ -31,10 +27,21 @@ justify-content: center;
 .intro__invite {
     display: grid;
     gap: 20px;
+    grid-auto-flow: row;
+    grid-template-areas: "title"
+        "photo";
+}
+
+.intro__figure-photo {
+    grid-area: photo;
 }
 
 .intro__invite-title {
     display: inline;
+}
+
+.intro__invite-title:first-of-type {
+    grid-area: title;
 }
 
 .intro__list {
@@ -76,6 +83,29 @@ justify-content: center;
     text-decoration-thickness: 2px;
 }
 
-.intro__description {
-    overflow: hidden;
+@media (min-width: 768px) {
+    .intro__invite {
+        display: block;
+    }
+
+    .intro__figure-photo {
+        float: right;
+        width: 285px;
+        margin-left: 25px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .intro__figure-photo {
+        width: 394px;
+        margin-left: 50px;
+    }
+}
+
+@media (min-width: 1300px) {
+    .intro__invite-title:first-of-type:before {
+        content: '';
+        display: block;
+        margin-block-start: 28px;
+    }
 }
