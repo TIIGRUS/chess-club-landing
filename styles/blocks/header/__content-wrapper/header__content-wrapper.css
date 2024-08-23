@@ -1,0 +1,17 @@
+.header__content-wrapper {
+    position: relative;
+}
+
+@media (min-width: 768px) {
+    .header__content-wrapper {
+        display: grid;
+        grid-template-columns: 542px 1fr;
+        min-height: 660px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .header__content-wrapper {
+        min-height: 732px;
+    }
+}

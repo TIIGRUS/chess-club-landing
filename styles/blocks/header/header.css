@@ -9,6 +9,7 @@
 @import url(./__circle/header__circle.css);
 @import url(./__front-figure/header__front-figure.css);
 @import url(./__chess-figure/header__chess-figure.css);
+@import url(./__content-wrapper/header__content-wrapper.css);
 
 .header {
     margin: 0 auto;
@@ -22,20 +23,5 @@
 @media (min-width: 768px) {
     .header {
         padding-block: 28px 0;
-    }
-
-    .header__content-wrapper {
-        display: grid;
-        grid-template-columns: 542px 1fr;
-        max-inline-size: 1366px;
-        margin: 0 auto;
-        min-height: 660px;
-    }
-}
-
-@media (min-width: 1024px) {
-    .header__content-wrapper {
-        min-height: 732px;
-        position: relative;
     }
 }
