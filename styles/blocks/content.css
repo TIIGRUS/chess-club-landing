@@ -32,3 +32,9 @@
         font-size: 20px;
     }
 }
+
+@media (min-width: 1300px) {
+    .content {
+        gap: 200px 0;
+    }
+}

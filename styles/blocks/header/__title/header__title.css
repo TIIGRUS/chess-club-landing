@@ -8,5 +8,6 @@
 @media (min-width: 1300px) {
     .header__title {
         margin-top: 60px;
+        line-height: 110%;
     }
 }

@@ -32,10 +32,6 @@
     grid-row: auto;
 }
 
-.slider__item_active~.slider__item_active .slider__content {
-    padding-block-start: 7px;
-}
-
 .slider__button {
     width: 36px;
     height: 36px;

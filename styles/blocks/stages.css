@@ -8,20 +8,20 @@
     margin-block-end: 28px;
 }
 
-.stages__decor::before {
+.stages__slider-list .slider__item::before {
     background-image: url(../../images/airplane.png);
     background-size: cover;
-    content: ' ';
-    width: 341px;
-    height: 215px;
+    width: 320px;
+    height: 198px;
     display: block;
     z-index: 1;
     position: relative;
-    margin-bottom: -86px;
+    margin-bottom: -70px;
     margin-left: auto;
-    left: 10px;
-    top: -13px;
+    left: -5px;
+    top: -5px;
     z-index: 2;
+    transform: rotate(-3deg);
 }
 
 .stage__card {
@@ -49,4 +49,90 @@
     font-size: 20px;
     line-height: 120%;
     align-self: flex-start;
+}
+
+@media (max-width:1023px) {
+    .stages__slider-list .slider__item:first-child::before {
+        content: '';
+    }
+
+    .stages__slider-list .slider__item_active~.slider__item_active .slider__content {
+        padding-block-start: 7px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .stages__slider-list {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: minmax(112px, 1fr);
+        grid-auto-rows: minmax(112px, auto);
+        gap: 20px;
+    }
+
+    .stages__slider-list .slider__item:nth-child(3) {
+        grid-row: span 2;
+    }
+
+    .stages__slider-list>.slider__item {
+        grid-column: auto;
+        grid-row: auto;
+    }
+
+    .stage__card {
+        padding: 20px;
+        font-size: 20px;
+        line-height: 120%;
+    }
+
+    .stages__slider-list .slider__item:last-child {
+        grid-column: span 2;
+    }
+
+    .stages__slider-list .slider__item:last-child::before {
+        content: '';
+        position: absolute;
+        right: 0;
+        left: 0;
+        margin-bottom: 0;
+        top: -100px;
+        transform: rotate(0);
+    }
+
+    .stages__slider-list .slider__item:last-child .stage__card {
+        padding-inline-end: 326px;
+    }
+
+    .stages__slider,
+    .stages__slider-list .slider__item:last-child {
+        overflow: visible;
+    }
+
+    .stages__intro {
+        max-width: 806px;
+        display: block;
+    }
+
+    .stages__title {
+        display: inline;
+        vertical-align: middle;
+    }
+
+    .stages__subtitle {
+        max-width: 280px;
+        vertical-align: middle;
+        display: inline-block;
+        padding-inline-start: 15px;
+    }
+}
+
+@media (min-width: 1300px) {
+    .stages__slider-list .slider__item:last-child::before {
+        right: -60px;
+        width: 400px;
+        height: 230px;
+    }
+
+    .stages {
+        gap: 55px 0;
+    }
 }
