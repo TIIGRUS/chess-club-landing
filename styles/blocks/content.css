@@ -1,7 +1,7 @@
 .content {
     display: flex;
     flex-direction: column;
-    gap: 120px 0;
+    gap: 120px;
 }
 
 .content__info-text {
@@ -35,6 +35,6 @@
 
 @media (min-width: 1300px) {
     .content {
-        gap: 200px 0;
+        gap: 200px;
     }
 }

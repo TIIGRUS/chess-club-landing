@@ -110,3 +110,21 @@
 .slider__counter-current {
     color: var(--dark-gray-color);
 }
+
+@media (min-width: 1024px) {
+    .slider__button:not(.slider__button_type_dot) {
+        width: 44px;
+        height: 44px;
+    }
+
+    .slider__button-icon {
+        width: 20px;
+        height: 20px;
+    }
+
+    .slider__counter {
+        font-size: 16px;
+        display: inline-flex;
+        gap: 3px;
+    }
+}

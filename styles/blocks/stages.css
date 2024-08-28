@@ -123,6 +123,14 @@
         display: inline-block;
         padding-inline-start: 15px;
     }
+
+    .stages__slider-controls {
+        display: none;
+    }
+
+    .stages__slider-list {
+        margin-block-end: 0;
+    }
 }
 
 @media (min-width: 1300px) {
