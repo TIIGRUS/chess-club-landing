@@ -6,7 +6,6 @@
     display: flex;
     flex-direction: column;
     gap: 40px;
-    background-color: var(--section-bg);
 }
 
 .footer__description {

@@ -17,7 +17,6 @@
     line-height: 130%;
     margin-block-end: 48px;
     overflow: hidden;
-    background-color: var(--section-bg);
 }
 
 @media (min-width: 768px) {

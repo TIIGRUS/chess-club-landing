@@ -14,7 +14,7 @@
     margin: 0 auto;
 }
 
-.page__section_has_bg {
+.page__section-colored {
     background-color: var(--section-bg);
 }
 
