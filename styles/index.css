@@ -3,6 +3,7 @@
 @import url(./blocks/page.css);
 @import url(./blocks/logo/logo.css);
 @import url(./blocks/decor.css);
+@import url(./blocks/running-line.css);
 @import url(./blocks/main-title.css);
 @import url(./blocks/header/header.css);
 @import url(./blocks/button.css);
@@ -12,5 +13,4 @@
 @import url(./blocks/stages.css);
 @import url(./blocks/member.css);
 @import url(./blocks/footer.css);
-@import url(./blocks/running-line.css);
 @import url(./animation.css);

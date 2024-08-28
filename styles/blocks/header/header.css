@@ -9,6 +9,7 @@
 @import url(./__circle/header__circle.css);
 @import url(./__front-figure/header__front-figure.css);
 @import url(./__chess-figure/header__chess-figure.css);
+@import url(./__running-line/header__running-line.css);
 
 .header {
     margin: 0 auto;

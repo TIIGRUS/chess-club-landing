@@ -1,14 +1,20 @@
 .footer {
     font-size: 16px;
-    padding-block: 78px 60px;
+    padding-block: 0 60px;
     margin-block-start: 100px;
     position: relative;
-}
-
-.footer__running-line {
-    top: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    background-color: var(--section-bg);
 }
 
 .footer__description {
     line-height: 120%;
+}
+
+@media (min-width:1300px) {
+    .footer {
+        padding-block: 0 70px;
+    }
 }
