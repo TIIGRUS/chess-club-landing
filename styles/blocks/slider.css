@@ -6,6 +6,7 @@
     counter-reset: slider-item;
     list-style: none;
     display: grid;
+    gap: var(--slider-gap-between-items);
     grid-template-columns: repeat(1, 100%);
     transition: transform 0.3s ease;
 }
@@ -92,6 +93,10 @@
     gap: 16px;
 }
 
+.slider__controls:has(.slider__counter) {
+    gap: 10px;
+}
+
 .slider__dots {
     list-style: none;
     display: flex;
@@ -110,6 +115,8 @@
 
 .slider__counter {
     color: var(--slider-counter-text-color);
+    min-width: 40px;
+    text-align: center;
 }
 
 .slider__dots,

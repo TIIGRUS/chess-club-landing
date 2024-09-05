@@ -73,7 +73,6 @@
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: minmax(112px, 1fr);
         grid-auto-rows: minmax(112px, auto);
-        gap: 20px;
         margin-block-end: 0;
     }
 
@@ -83,7 +82,7 @@
     }
 
     .stages__slider-list .slider__item:has(.stage__card:nth-child(2)) {
-        gap: 20px;
+        gap: var(--slider-gap-between-items);
         grid-template-columns: repeat(2, 1fr);
     }
 

@@ -50,4 +50,5 @@
     --slider-btn-bg-hover: var(--yellow-color);
     --slider-dot-bg: #D9D9D9;
     --slider-counter-text-color: var(--gray-color);
+    --slider-gap-between-items: 20px;
 }
