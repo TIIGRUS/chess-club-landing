@@ -169,16 +169,17 @@
             Будущие источники обогащения васюкинцев
           </p>
         </article>
-        <div class="slider stages__slider">
+        <div
+          class="slider stages__slider stages__decor stages__decor_visible_sm"
+          id="slider-stages"
+        >
           <ul class="slider__list stages__slider-list">
-            <li class="slider__item slider__item_active">
+            <li>
               <article class="slider__content decor decor_stamp stage__card">
                 <p class="stage__card-text">
                   Строительство железнодорожной магистрали Москва-Васюки
                 </p>
               </article>
-            </li>
-            <li class="slider__item slider__item_active">
               <article class="slider__content decor decor_stamp stage__card">
                 <p class="stage__card-text">
                   Открытие фешенебельной гостиницы «Проходная пешка» и других
@@ -186,7 +187,7 @@
                 </p>
               </article>
             </li>
-            <li class="slider__item">
+            <li>
               <article class="slider__content decor decor_stamp stage__card">
                 <p class="stage__card-text">
                   Поднятие сельского хозяйства в радиусе на тысячу километров:
@@ -194,19 +195,17 @@
                 </p>
               </article>
             </li>
-            <li class="slider__item">
+            <li>
               <article class="slider__content decor decor_stamp stage__card">
                 <p class="stage__card-text">Строительство дворца для турнира</p>
               </article>
-            </li>
-            <li class="slider__item">
               <article class="slider__content decor decor_stamp stage__card">
                 <p class="stage__card-text">
                   Размещение гаражей для гостевого автотранспорта
                 </p>
               </article>
             </li>
-            <li class="slider__item">
+            <li>
               <article class="slider__content decor decor_stamp stage__card">
                 <p class="stage__card-text">
                   Постройка сверхмощной радиостанции для передачи всему миру
@@ -214,7 +213,7 @@
                 </p>
               </article>
             </li>
-            <li class="slider__item">
+            <li class="stages__decor stages__decor_visible_lg">
               <article class="slider__content decor decor_stamp stage__card">
                 <p class="stage__card-text">
                   Создание аэропорта «Большие Васюки» с регулярным отправлением
@@ -224,59 +223,12 @@
               </article>
             </li>
           </ul>
-          <div class="slider__controls stages__slider-controls">
-            <button
-              type="button"
-              class="slider__button slider__button_disabled slider__button_prev"
-              disabled
-            >
-              <svg class="slider__button-icon" width="16" height="16">
-                <use href="./images/icons/sprite.svg#arrow"></use>
-              </svg>
-            </button>
-            <ul class="slider__dots">
-              <li>
-                <button
-                  type="button"
-                  class="slider__button slider__button_type_dot slider__button_active"
-                ></button>
-              </li>
-              <li>
-                <button
-                  type="button"
-                  class="slider__button slider__button_type_dot"
-                ></button>
-              </li>
-              <li>
-                <button
-                  type="button"
-                  class="slider__button slider__button_type_dot"
-                ></button>
-              </li>
-              <li>
-                <button
-                  type="button"
-                  class="slider__button slider__button_type_dot"
-                ></button>
-              </li>
-              <li>
-                <button
-                  type="button"
-                  class="slider__button slider__button_type_dot"
-                ></button>
-              </li>
-            </ul>
-            <button type="button" class="slider__button slider__button_next">
-              <svg class="slider__button-icon" width="16" height="16">
-                <use href="./images/icons/sprite.svg#arrow"></use>
-              </svg>
-            </button>
-          </div>
+          <div class="slider__controls stages__slider-controls"></div>
         </div>
       </section>
       <section class="members page__section">
         <h2 class="main-title members__title">Участники турнира</h2>
-        <div class="slider slider-js">
+        <div class="slider" id="slider-members">
           <ul class="slider__list members__slider-list">
             <li class="slider__item slider__item_active">
               <figure class="slider__content member">
@@ -351,28 +303,7 @@
               </figure>
             </li>
           </ul>
-          <div class="slider__controls members__slider-controls">
-            <button
-              type="button"
-              class="slider__button slider__button_disabled slider__button_prev"
-              disabled
-            >
-              <svg class="slider__button-icon" width="16" height="16">
-                <use href="./images/icons/sprite.svg#arrow"></use>
-              </svg>
-            </button>
-            <div class="slider__counter">
-              <span class="slider__counter-current">1</span>/<span
-                class="slider__counter-total"
-                >6</span
-              >
-            </div>
-            <button type="button" class="slider__button slider__button_next">
-              <svg class="slider__button-icon" width="16" height="16">
-                <use href="./images/icons/sprite.svg#arrow"></use>
-              </svg>
-            </button>
-          </div>
+          <div class="slider__controls members__slider-controls"></div>
         </div>
       </section>
     </main>
