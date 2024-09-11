@@ -48,6 +48,16 @@
     }
 }
 
+@media (max-width: 767px) {
+    .members__slider-list {
+        display: flex;
+    }
+
+    .members__slider-list .slider__item {
+        flex: 1 0 100%;
+    }
+}
+
 @media (min-width: 1024px) {
     .members__slider-list {
         grid-template-columns: repeat(auto-fit, minmax(33%, 394px));
