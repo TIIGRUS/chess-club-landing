@@ -1,26 +1,4 @@
 document.addEventListener('DOMContentLoaded', function () {
-    // const slider = document.querySelector('.slider-js');
-    // const sliderList = slider.querySelector('.slider__list');
-    // const sliderItems = slider.querySelectorAll('.slider__item');
-
-    // let currentIndex = 0;
-
-    // function switchSlide() {
-    //     sliderItems[currentIndex].classList.remove('slider__item_active');
-    //     // currentIndex = (currentIndex + 1) % sliderItems.length;
-    //     if (currentIndex === sliderItems.length - 1) {
-    //         currentIndex = 1;
-    //         sliderList.style.transform = 'translateX(100)';
-    //     } else {
-    //         currentIndex++;
-    //         sliderList.style.transform = `translateX(-${currentIndex * 100}%)`;
-    //     }
-    //     sliderItems[currentIndex].classList.add('slider__item_active');
-    //     console.log(currentIndex)
-    // }
-
-    // setInterval(switchSlide, 2000);
-
     // Running Line
     // const resizeWidthRunningLine = new ResizeObserver((entries) => {
     //     for (const entry of entries) {
@@ -44,7 +22,6 @@ document.addEventListener('DOMContentLoaded', function () {
     // }
 
     // resizeWidthRunningLine.observe(runningLine);
-
 
     // Slider
     class Slider {
@@ -82,6 +59,7 @@ document.addEventListener('DOMContentLoaded', function () {
             this.counterClassName = `${this.sliderClassName}__counter`;
             this.counterCurrentClassName = `${this.sliderClassName}__counter-current`;
             this.counterTotalClassName = `${this.sliderClassName}__counter-total`;
+            this.sliderButtonIconClassName = `${this.sliderClassName}__button-icon`;
 
             // DOM Elements
             this.slider = document.querySelector(this.selector);
@@ -100,6 +78,7 @@ document.addEventListener('DOMContentLoaded', function () {
             }
 
             this.slides = Array.from(this.slidesList.children);
+            this.slidesListStyles = getComputedStyle(this.slidesList);
 
             this.init();
         }
@@ -109,21 +88,12 @@ document.addEventListener('DOMContentLoaded', function () {
         }
 
         set currentSlideIndex(value) {
-            if (value > 0 && value <= this.slidesLength) {
-                this.#currentSlideIndex = value
+            if (value < 1) {
+                this.#currentSlideIndex = this.slidesLength;
             } else if (value > this.slidesLength) {
-                if (this.isLoop) {
-                    this.#currentSlideIndex = 1;
-                } else {
-                    this.#currentSlideIndex = this.slidesLength;
-                }
-            }
-            else {
-                if (this.isLoop) {
-                    this.#currentSlideIndex = this.slidesLength;
-                } else {
-                    this.#currentSlideIndex = 1;
-                }
+                this.#currentSlideIndex = 1;
+            } else {
+                this.#currentSlideIndex = value;
             }
         }
 
@@ -132,32 +102,75 @@ document.addEventListener('DOMContentLoaded', function () {
         }
 
         showSlide(index) {
-            if (index < 0) {
-                index = this.slidesLength;
-            } else if (index > this.slidesLength) {
-                index = 1;
+            const visibleSlides = this.initVisibleSlides; // Текущее количество видимых слайдов
+            const totalSlides = this.slidesLength; // Общее количество слайдов
+
+            // Устанавливаем индекс слайда
+            this.currentSlideIndex = index;
+
+            // Рассчитываем ширину одного слайда с учетом gap
+            let slideWidth = this.slides[0].offsetWidth;
+            let gap = parseInt(this.slidesListStyles.gap) || 0;
+            // let gap = Number(this.slidesListStyles.gap.match(/\d+/)[0]);
+            const totalWidthPerSlide = slideWidth + gap;
+
+            // Рассчитываем стартовый и конечный индексы для группы
+            let startIndex = this.currentSlideIndex - 1;
+            let endIndex = startIndex + visibleSlides - 1;
+
+            // Если осталось меньше слайдов, чем необходимо для полной группы
+            if (endIndex >= totalSlides) {
+                console.log('If endIndex >= totalSlides');
+
+                if (totalSlides % visibleSlides !== 0) {
+                    // Если остался один или несколько слайдов, которые не помещаются в группу, показываем их
+                    startIndex = totalSlides - visibleSlides;
+                    endIndex = totalSlides - 1;
+                } else {
+                    // Если осталась полная группа
+                    endIndex = totalSlides - 1;
+                    startIndex = Math.max(totalSlides - visibleSlides, 0); // Сдвигаем начало
+                }
             }
 
+            // Показываем только слайды от startIndex до endIndex
             this.slides.forEach((slide, i) => {
-                if (i === index - 1) {
+                if (i >= startIndex && i <= endIndex) {
                     slide.classList.add(this.sliderActiveItemClassName);
                 } else {
                     slide.classList.remove(this.sliderActiveItemClassName);
                 }
             });
+
+            // Смещаем позицию группы слайдов
+            const offset = totalWidthPerSlide * startIndex;
+            this.slidesList.style.transform = `translateX(-${offset}px)`;
+
+            // Обновляем UI после показа слайда
+            this.#updateUISlider();
         }
 
         showNextSlide() {
-            this.currentSlideIndex++;
+            // const maxIndex = this.slidesLength - this.initVisibleSlides + 1;
+            this.currentSlideIndex = this.currentSlideIndex + this.initVisibleSlides;
+
+            // if (this.currentSlideIndex > maxIndex) {
+            //     this.currentSlideIndex = this.isLoop ? 1 : maxIndex;
+            // }
+
             this.showSlide(this.currentSlideIndex);
-            this.#updateUISlider();
         }
 
         showPrevSlide() {
-            this.currentSlideIndex--;
+            this.currentSlideIndex = this.currentSlideIndex - this.initVisibleSlides;
+
+            // if (this.currentSlideIndex < 1) {
+            //     this.currentSlideIndex = this.isLoop ? this.slidesLength - this.initVisibleSlides + 1 : 1;
+            // }
+
             this.showSlide(this.currentSlideIndex);
-            this.#updateUISlider();
         }
+
 
         #updateUISlider() {
             this.#setDisabledButtons();
@@ -170,7 +183,6 @@ document.addEventListener('DOMContentLoaded', function () {
         }
 
         #setInitiVisibleSLides(value) {
-            this.#currentSlideIndex = value;
             this.slides.forEach((element, index) => {
                 if (index < value) {
                     element.classList.add(this.sliderActiveItemClassName);
@@ -203,13 +215,21 @@ document.addEventListener('DOMContentLoaded', function () {
             counter.classList.add(this.counterClassName);
             this.sliderCounter = counter;
 
-            counter.innerHTML = `<span class="${this.counterCurrentClassName}">${this.currentSlideIndex}</span>/<span class="${this.counterTotalClassName}">${this.slidesLength}</span>`
+            counter.innerHTML = `<span class="${this.counterCurrentClassName}">${this.initVisibleSlides}</span>/<span class="${this.counterTotalClassName}">${this.slidesLength}</span>`
 
             this.sliderControls.append(counter);
         }
 
         #setCounterCurrent() {
-            this.sliderCounter.querySelector(`.${this.counterCurrentClassName}`).textContent = this.currentSlideIndex;
+            const totalSlides = this.slidesLength;
+            // const startIndex = this.currentSlideIndex;
+            let startIndex = this.currentSlideIndex;
+            startIndex += this.initVisibleSlides - 1;
+
+            const start = Math.min(startIndex, totalSlides);
+
+            // Обновляем счетчик, чтобы показывать текущее количество видимых слайдов и общее количество слайдов
+            this.sliderCounter.querySelector(`.${this.counterCurrentClassName}`).textContent = start;
         }
 
         #renderDots() {
@@ -248,7 +268,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
         #renderButton() {
             const btn = document.createElement('button');
-            const icon = `<svg class="slider__button-icon" width="16" height="16">
+            const icon = `<svg class="${this.sliderButtonIconClassName}" width="16" height="16">
                 <use href="./images/icons/sprite.svg#arrow"></use>
               </svg>`
             btn.classList.add(this.sliderButtonClassName);
@@ -281,7 +301,6 @@ document.addEventListener('DOMContentLoaded', function () {
         }
 
         #renderSlider() {
-            this.#setInitiVisibleSLides(this.initVisibleSlides);
             this.#renderButtonsControls();
 
             if (this.dots) {
@@ -297,7 +316,18 @@ document.addEventListener('DOMContentLoaded', function () {
             });
         }
 
+        updateVisibleSlides() {
+            const containerWidth = this.slidesList.offsetWidth;
+            const slideWidth = this.slides[0].offsetWidth;
+
+            this.initVisibleSlides = Math.floor(containerWidth / slideWidth);
+            console.log('Initial visible slides:', this.initVisibleSlides);
+        }
+
         init() {
+            // Динамически вычисляем количество видимых слайдов
+            this.updateVisibleSlides();
+            this.#setInitiVisibleSLides(this.initVisibleSlides);
             this.#renderSlider();
 
             if (this.autoplay) {
@@ -308,6 +338,11 @@ document.addEventListener('DOMContentLoaded', function () {
                     }
                 }, this.delay);
             }
+
+            // Добавляем событие для пересчета видимых слайдов при изменении размера окна
+            window.addEventListener('resize', () => {
+                this.updateVisibleSlides();
+            });
         }
     }
 
