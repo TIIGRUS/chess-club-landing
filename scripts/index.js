@@ -1,28 +1,4 @@
 document.addEventListener('DOMContentLoaded', function () {
-    // Running Line
-    // const resizeWidthRunningLine = new ResizeObserver((entries) => {
-    //     for (const entry of entries) {
-    //         // calculateAnimation(entry.contentRect.width)
-    //     }
-    // });
-
-    // const runningLine = document.querySelector('.running-line');
-    // const runningLineList = document.querySelector('.running-line__list');
-
-    // function calculateAnimation() {
-    //     // Ширина видимого контейнера, внутри которого будет прокручиваться список.
-    //     const containerWidth = runningLine.offsetWidth;
-    //     // Получаем полную ширину списка с контентом, который будет прокручиваться.
-    //     const contentWidth = runningLineList.scrollWidth;
-    //     // Рассчитываем время анимации: больше ширина контента – больше время
-    //     const animationDuration = (contentWidth + containerWidth) / 100; // чем больше делитель, тем быстрее строка.
-
-    //     // Применяем рассчитанное время к анимации
-    //     runningLineList.style.animationDuration = `${animationDuration}s`;
-    // }
-
-    // resizeWidthRunningLine.observe(runningLine);
-
     // Slider
     class Slider {
         #currentSlideIndex = 1;
@@ -49,9 +25,9 @@ document.addEventListener('DOMContentLoaded', function () {
             this.sliderItemClassName = `${this.sliderClassName}__item`;
             this.sliderActiveItemClassName = `${this.sliderItemClassName}_active`
             this.sliderButtonClassName = `${this.sliderClassName}__button`;
+            this.sliderButtonClassNameActive = `${this.sliderClassName}__button_active`;
             this.sliderButtonClassNameDisabled = `${this.sliderClassName}__button_disabled`;
             this.sliderControlsClassName = `${this.sliderClassName}__controls`;
-            this.sliderButtonClassNameActive = `${this.sliderClassName}__button_active`;
             this.sliderDotsListClassName = `${this.sliderClassName}__dots`;
             this.sliderDotItemClassName = `${this.sliderClassName}__button_type_dot`;
             this.sliderButtonClassNamePrev = `${this.sliderClassName}__button_prev`;
@@ -120,8 +96,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
             // Если осталось меньше слайдов, чем необходимо для полной группы
             if (endIndex >= totalSlides) {
-                console.log('If endIndex >= totalSlides');
-
                 if (totalSlides % visibleSlides !== 0) {
                     // Если остался один или несколько слайдов, которые не помещаются в группу, показываем их
                     startIndex = totalSlides - visibleSlides;
@@ -151,32 +125,20 @@ document.addEventListener('DOMContentLoaded', function () {
         }
 
         showNextSlide() {
-            // const maxIndex = this.slidesLength - this.initVisibleSlides + 1;
             this.currentSlideIndex = this.currentSlideIndex + this.initVisibleSlides;
-
-            // if (this.currentSlideIndex > maxIndex) {
-            //     this.currentSlideIndex = this.isLoop ? 1 : maxIndex;
-            // }
-
             this.showSlide(this.currentSlideIndex);
         }
 
         showPrevSlide() {
             this.currentSlideIndex = this.currentSlideIndex - this.initVisibleSlides;
-
-            // if (this.currentSlideIndex < 1) {
-            //     this.currentSlideIndex = this.isLoop ? this.slidesLength - this.initVisibleSlides + 1 : 1;
-            // }
-
             this.showSlide(this.currentSlideIndex);
         }
-
 
         #updateUISlider() {
             this.#setDisabledButtons();
 
             if (this.dots) {
-                this.#renderDots();
+                this.#updateDotsState();
             } else {
                 this.#setCounterCurrent();
             }
@@ -184,6 +146,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
         #setInitiVisibleSLides(value) {
             this.slides.forEach((element, index) => {
+                element.classList.remove(this.sliderActiveItemClassName);
+
                 if (index < value) {
                     element.classList.add(this.sliderActiveItemClassName);
                 }
@@ -223,47 +187,70 @@ document.addEventListener('DOMContentLoaded', function () {
         #setCounterCurrent() {
             const totalSlides = this.slidesLength;
             // const startIndex = this.currentSlideIndex;
-            let startIndex = this.currentSlideIndex;
-            startIndex += this.initVisibleSlides - 1;
-
+            let startIndex = this.currentSlideIndex + this.initVisibleSlides - 1;
             const start = Math.min(startIndex, totalSlides);
 
             // Обновляем счетчик, чтобы показывать текущее количество видимых слайдов и общее количество слайдов
             this.sliderCounter.querySelector(`.${this.counterCurrentClassName}`).textContent = start;
         }
 
-        #renderDots() {
-            const dots = this.slides.map((_, index) => {
-                const dot = document.createElement('button');
-                const dotWrapper = document.createElement('li');
-
-                dot.classList.add(this.sliderButtonClassName, this.sliderDotItemClassName, `${this.currentSlideIndex === index + 1 ? this.sliderButtonClassNameActive : this.sliderButtonClassName}`);
-                dot.setAttribute('type', 'button');
-                dot.setAttribute('data-slide-index', index + 1);
-
-                dotWrapper.append(dot);
-                return dotWrapper;
-            });
-
-            this.sliderDotsList.replaceChildren(...dots);
-        }
-
         #renderDotsList() {
+            const existingDotsList = this.slider.querySelector(`.${this.sliderDotsListClassName}`);
+
+            if (existingDotsList) {
+                existingDotsList.remove();
+            }
+
             const dotsList = document.createElement('ul');
             dotsList.classList.add(this.sliderDotsListClassName);
-            this.sliderControls.append(dotsList);
+            const dotsFragment = document.createDocumentFragment();
             this.sliderDotsList = dotsList;
-            this.#renderDots();
+
+            this.slides.map((_, index) => {
+                const dotBtn = document.createElement('button');
+                const dotListItem = document.createElement('li');
+
+                // dotBtn.classList.add(this.sliderButtonClassName, this.sliderDotItemClassName, `${this.currentSlideIndex === index + 1 ? this.sliderButtonClassNameActive : this.sliderButtonClassName}`);
+                dotBtn.classList.add(this.sliderButtonClassName, this.sliderDotItemClassName);
+                dotBtn.setAttribute('type', 'button');
+                dotBtn.setAttribute('data-slide-index', index + 1);
+                dotBtn.setAttribute('aria-label', `Перейти к слайду ${index + 1}`);
+
+                if (this.currentSlideIndex === index + 1) {
+                    dotBtn.classList.add(this.sliderButtonClassNameActive);
+                }
+
+                dotListItem.append(dotBtn);
+                dotsFragment.append(dotListItem);
+            });
 
             dotsList.addEventListener('click', (e) => {
                 const target = e.target;
-                if (target.classList.contains(this.sliderButtonClassName)) {
+                if (target.classList.contains(this.sliderDotItemClassName)) {
                     this.currentSlideIndex = Number(target.dataset.slideIndex);
                     this.showSlide(this.currentSlideIndex);
-                    this.#renderDots();
+                    this.#updateDotsState();
                     this.#setDisabledButtons();
                 }
             })
+
+
+            dotsList.append(dotsFragment);
+            this.sliderControls.append(dotsList);
+        }
+
+        #updateDotsState() {
+            const dots = this.slider.querySelectorAll(`.${this.sliderDotItemClassName}`);
+
+            dots.forEach((dot) => {
+                dot.classList.remove(this.sliderButtonClassNameActive);
+            })
+
+            const activeDot = this.sliderDotsList.querySelector(`.${this.sliderDotItemClassName}[data-slide-index="${this.currentSlideIndex}"]`);
+
+            if (activeDot) {
+                activeDot.classList.add(this.sliderButtonClassNameActive);
+            }
         }
 
         #renderButton() {
@@ -298,10 +285,21 @@ document.addEventListener('DOMContentLoaded', function () {
             this.sliderButtonPrev.addEventListener('click', () => {
                 this.showPrevSlide();
             });
+
+            // this.sliderControls.addEventListener('click', (e) => {
+            //     const target = e.target;
+
+            //     if (target.classList.contains(this.sliderButtonClassNameNext)) {
+            //         this.showNextSlide();
+            //     } else if (target.classList.contains(this.sliderButtonClassNamePrev)) {
+            //         this.showPrevSlide()
+            //     }
+            // })
         }
 
         #renderSlider() {
             this.#renderButtonsControls();
+            this.#setDisabledButtons();
 
             if (this.dots) {
                 this.#renderDotsList();
@@ -309,25 +307,23 @@ document.addEventListener('DOMContentLoaded', function () {
                 this.#renderCounter();
             }
 
-            this.#setDisabledButtons();
-
             this.slides.forEach(element => {
                 element.classList.add(this.sliderItemClassName);
             });
         }
 
-        updateVisibleSlides() {
+        #updateVisibleSlides() {
             const containerWidth = this.slidesList.offsetWidth;
             const slideWidth = this.slides[0].offsetWidth;
 
             this.initVisibleSlides = Math.floor(containerWidth / slideWidth);
-            console.log('Initial visible slides:', this.initVisibleSlides);
+
+            this.#setInitiVisibleSLides(this.initVisibleSlides);
         }
 
         init() {
             // Динамически вычисляем количество видимых слайдов
-            this.updateVisibleSlides();
-            this.#setInitiVisibleSLides(this.initVisibleSlides);
+            this.#updateVisibleSlides();
             this.#renderSlider();
 
             if (this.autoplay) {
@@ -341,7 +337,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
             // Добавляем событие для пересчета видимых слайдов при изменении размера окна
             window.addEventListener('resize', () => {
-                this.updateVisibleSlides();
+                this.#updateVisibleSlides();
+                this.#updateUISlider();
             });
         }
     }
@@ -357,4 +354,28 @@ document.addEventListener('DOMContentLoaded', function () {
         autoplay: true,
         isLoop: true
     });
+
+    // Running Line
+    // const resizeWidthRunningLine = new ResizeObserver((entries) => {
+    //     for (const entry of entries) {
+    //         // calculateAnimation(entry.contentRect.width)
+    //     }
+    // });
+
+    // const runningLine = document.querySelector('.running-line');
+    // const runningLineList = document.querySelector('.running-line__list');
+
+    // function calculateAnimation() {
+    //     // Ширина видимого контейнера, внутри которого будет прокручиваться список.
+    //     const containerWidth = runningLine.offsetWidth;
+    //     // Получаем полную ширину списка с контентом, который будет прокручиваться.
+    //     const contentWidth = runningLineList.scrollWidth;
+    //     // Рассчитываем время анимации: больше ширина контента – больше время
+    //     const animationDuration = (contentWidth + containerWidth) / 100; // чем больше делитель, тем быстрее строка.
+
+    //     // Применяем рассчитанное время к анимации
+    //     runningLineList.style.animationDuration = `${animationDuration}s`;
+    // }
+
+    // resizeWidthRunningLine.observe(runningLine);
 });
