@@ -23,7 +23,11 @@
     <header class="header decor page__section-colored">
       <article class="header__content page__section">
         <a class="logo">
-          <img src="./images/icons/logo.svg" class="logo__img" alt="Логотип" />
+          <img
+            src="./images/icons/logo.svg"
+            class="logo__img"
+            alt="Логотип шахматного клуба в виде четырех черных коней"
+          />
           <span>
             <span class="logo__accent">Клуб</span>
             четырех коней
@@ -42,16 +46,20 @@
           Оплатите взнос на телеграммы для организации Международного
           васюкинского турнира по шахматам
         </p>
-        <div class="header__buttons">
+        <nav class="header__buttons">
           <a href="#intro" class="button button_theme_dark">
             Поддержать шахматную мысль
           </a>
           <a href="#about" class="button button_theme_light">
             Подробнее о турнире
           </a>
-        </div>
+        </nav>
       </article>
-      <div class="header__composition">
+      <div
+        class="header__composition"
+        role="img"
+        aria-label="Композиция: На первом плане шахматная доска с двумя фигурами: коня и пешки. На втором плане идет застройка города. На заднем плане шахматные фигуры короля и королевы возвышающиеся на городом и вращающийся круг в виде солнца с лозунгом."
+      >
         <picture>
           <source
             srcset="./images/composition-city-xl.png"
@@ -61,7 +69,7 @@
           <img
             src="./images/mobile-composition-city.png"
             class="header__composition-city"
-            alt=""
+            alt="Изображение с застройкой города"
           />
         </picture>
         <picture>
@@ -69,12 +77,10 @@
             srcset="./images/horse-figure.png"
             media="(min-width: 1300px)"
             type="image/jpeg"
-            width="154"
-            height="244"
           />
           <img
             src="./images/mobile-horse-figure.png"
-            alt=""
+            alt="Фигура шахматного коня"
             class="header__composition-horse header__chess-figure"
           />
         </picture>
@@ -83,9 +89,13 @@
           class="header__front-figure header__chess-figure"
           width="82"
           height="122"
-          alt=""
+          alt="Фигура шахматной пешки"
         />
-        <img src="./images/circle.svg" class="header__circle rotation" alt="" />
+        <img
+          src="./images/circle.svg"
+          class="header__circle rotation"
+          alt="Вращающиеся круг в виде солнца с лозунгом"
+        />
       </div>
       <div class="running-line header__running-line">
         <ul class="running-line__list">
