@@ -8,6 +8,7 @@
 .intro__photo {
     margin: 0 auto;
     border-radius: 100%;
+    object-fit: cover;
 }
 
 .intro__photo-game {
@@ -33,7 +34,7 @@
     display: inline;
 }
 
-.intro__invite-title:first-of-type {
+.intro__invite-title:nth-child(2) {
     grid-area: title;
 }
 
@@ -162,7 +163,7 @@
 }
 
 @media (min-width: 1300px) {
-    .intro__invite-title:first-of-type:before {
+    .intro__invite-title:nth-child(2)::before {
         content: '';
         display: block;
         margin-block-start: 28px;

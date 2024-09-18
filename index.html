@@ -62,37 +62,37 @@
       >
         <picture>
           <source
-            srcset="./images/composition-city-xl.png"
+            srcset="./images/header/composition-city-xl.png"
             media="(min-width: 768px)"
             type="image/jpeg"
           />
           <img
-            src="./images/mobile-composition-city.png"
+            src="./images/header/mobile-composition-city.png"
             class="header__composition-city"
             alt="Изображение с застройкой города"
           />
         </picture>
         <picture>
           <source
-            srcset="./images/horse-figure.png"
+            srcset="./images/header/horse-figure.png"
             media="(min-width: 1300px)"
             type="image/jpeg"
           />
           <img
-            src="./images/mobile-horse-figure.png"
+            src="./images/header/mobile-horse-figure.png"
             alt="Фигура шахматного коня"
             class="header__composition-horse header__chess-figure"
           />
         </picture>
         <img
-          src="./images/front-figure.png"
+          src="./images/header/front-figure.png"
           class="header__front-figure header__chess-figure"
           width="82"
           height="122"
           alt="Фигура шахматной пешки"
         />
         <img
-          src="./images/circle.svg"
+          src="./images/header/circle.svg"
           class="header__circle rotation"
           alt="Вращающиеся круг в виде солнца с лозунгом"
         />
@@ -112,28 +112,37 @@
       </div>
     </header>
     <main class="content">
-      <section class="intro page__section" id="intro">
-        <article class="intro__invite">
+      <section
+        class="intro page__section"
+        id="intro"
+        aria-labelledby="intro-title"
+      >
+        <header class="intro__invite">
           <figure class="decor intro__figure-photo">
             <img
-              src="./images/photo-game-chess.png"
+              src="./images/intro/photo-game-chess.png"
               class="intro__photo"
-              alt="Фото партии в шахматы"
+              alt="Фото шахматного турнира"
+              width="394"
             />
           </figure>
-          <h2 class="main-title intro__invite-title content__title">
+          <h2
+            id="intro-title"
+            class="main-title intro__invite-title content__title"
+          >
             Чтобы поддержать Международный васюкинский турнир
           </h2>
-          <h2 class="main-title intro__invite-title content__title">
+          <h3 class="main-title intro__invite-title content__title">
             посетите лекцию на тему:
             <span class="main-title__accent">«Плодотворная дебютная идея»</span>
-          </h2>
-        </article>
+          </h3>
+        </header>
         <figure class="decor intro__figure-game">
           <img
             class="intro__photo-game"
-            src="./images/party-chess.png"
+            src="./images/intro/party-chess.png"
             alt="На переднем плане сбивают фигуру коня. В центре шахматист обдумывает ход. На заднем плане купюра в 10000 рублей."
+            width="474"
           />
         </figure>
         <h3 class="content__title main-title intro__list-title">
@@ -172,67 +181,71 @@
           По всем вопросам обращаться в администрацию к К. Михельсону
         </p>
       </section>
-      <section class="stages page__section">
-        <article class="content__section-intro stages__intro">
-          <h2 class="main-title stages__title">Этапы преображения Васюков</h2>
+      <section class="stages page__section" aria-labelledby="stages-title">
+        <header class="content__section-intro stages__intro">
+          <h2 class="main-title stages__title" id="stages-title">
+            Этапы преображения Васюков
+          </h2>
           <p class="content__info-text stages__subtitle">
             Будущие источники обогащения васюкинцев
           </p>
-        </article>
+        </header>
         <div
           class="slider stages__slider stages__decor stages__decor_visible_sm"
           id="slider-stages"
         >
-          <ul class="slider__list stages__slider-list">
-            <li>
+          <div class="slider__list stages__slider-list">
+            <div>
               <article class="slider__content decor decor_stamp stage__card">
-                <p class="stage__card-text">
+                <h3 class="stage__card-text">
                   Строительство железнодорожной магистрали Москва-Васюки
-                </p>
+                </h3>
               </article>
               <article class="slider__content decor decor_stamp stage__card">
-                <p class="stage__card-text">
+                <h3 class="stage__card-text">
                   Открытие фешенебельной гостиницы «Проходная пешка» и других
                   небоскрёбов
-                </p>
+                </h3>
               </article>
-            </li>
-            <li>
+            </div>
+            <div>
               <article class="slider__content decor decor_stamp stage__card">
-                <p class="stage__card-text">
+                <h3 class="stage__card-text">
                   Поднятие сельского хозяйства в радиусе на тысячу километров:
                   производство овощей, фруктов, икры, шоколадных конфет
-                </p>
+                </h3>
               </article>
-            </li>
-            <li>
+            </div>
+            <div>
               <article class="slider__content decor decor_stamp stage__card">
-                <p class="stage__card-text">Строительство дворца для турнира</p>
+                <h3 class="stage__card-text">
+                  Строительство дворца для турнира
+                </h3>
               </article>
               <article class="slider__content decor decor_stamp stage__card">
-                <p class="stage__card-text">
+                <h3 class="stage__card-text">
                   Размещение гаражей для гостевого автотранспорта
-                </p>
+                </h3>
               </article>
-            </li>
-            <li>
+            </div>
+            <div>
               <article class="slider__content decor decor_stamp stage__card">
-                <p class="stage__card-text">
+                <h3 class="stage__card-text">
                   Постройка сверхмощной радиостанции для передачи всему миру
                   сенсационных результатов
-                </p>
+                </h3>
               </article>
-            </li>
-            <li class="stages__decor stages__decor_visible_lg">
+            </div>
+            <div class="stages__decor stages__decor_visible_lg">
               <article class="slider__content decor decor_stamp stage__card">
-                <p class="stage__card-text">
+                <h3 class="stage__card-text">
                   Создание аэропорта «Большие Васюки» с регулярным отправлением
                   почтовых самолётов и дирижаблей во все концы света, включая
                   Лос-Анжелос и Мельбурн
-                </p>
+                </h3>
               </article>
-            </li>
-          </ul>
+            </div>
+          </div>
           <div class="slider__controls stages__slider-controls"></div>
         </div>
       </section>
@@ -250,7 +263,7 @@
                   />
                 </div>
                 <figcaption class="member__info">
-                  <h3 class="member__name">1 Хозе-Рауль Капабланка</h3>
+                  <h3 class="member__name">Хозе-Рауль Капабланка</h3>
                   <p class="member__rank">Чемпион мира по шахматам</p>
                   <a href="#" class="button button_size_s button_theme_info"
                     >Подробнее</a
@@ -263,12 +276,12 @@
                 <div class="decor decor_stamp member__photo-wrapper">
                   <img
                     src="./images/member.svg"
-                    alt="Участник Хозе-Рауль Капабланка"
+                    alt="Участник Эммануил Ласкер"
                     class="member__photo"
                   />
                 </div>
                 <figcaption class="member__info">
-                  <h3 class="member__name">2 Эммануил Ласкер</h3>
+                  <h3 class="member__name">Эммануил Ласкер</h3>
                   <p class="member__rank">Чемпион мира по шахматам</p>
                   <a href="#" class="button button_size_s button_theme_info"
                     >Подробнее</a
@@ -281,12 +294,12 @@
                 <div class="decor decor_stamp member__photo-wrapper">
                   <img
                     src="./images/member.svg"
-                    alt="Участник Хозе-Рауль Капабланка"
+                    alt="Участник Александр Алехин"
                     class="member__photo"
                   />
                 </div>
                 <figcaption class="member__info">
-                  <h3 class="member__name">3 Александр Алехин</h3>
+                  <h3 class="member__name">Александр Алехин</h3>
                   <p class="member__rank">Чемпион мира по шахматам</p>
                   <a href="#" class="button button_size_s button_theme_info"
                     >Подробнее</a
@@ -299,12 +312,12 @@
                 <div class="decor decor_stamp member__photo-wrapper">
                   <img
                     src="./images/member.svg"
-                    alt="Участник Хозе-Рауль Капабланка"
+                    alt="Участник Арон Нимцович"
                     class="member__photo"
                   />
                 </div>
                 <figcaption class="member__info">
-                  <h3 class="member__name">4 Арон Нимцович</h3>
+                  <h3 class="member__name">Арон Нимцович</h3>
                   <p class="member__rank">Чемпион мира по шахматам</p>
                   <a href="#" class="button button_size_s button_theme_info"
                     >Подробнее</a
@@ -317,12 +330,12 @@
                 <div class="decor decor_stamp member__photo-wrapper">
                   <img
                     src="./images/member.svg"
-                    alt="Участник Хозе-Рауль Капабланка"
+                    alt="Участник Рихард Рети"
                     class="member__photo"
                   />
                 </div>
                 <figcaption class="member__info">
-                  <h3 class="member__name">5 Рихард Рети</h3>
+                  <h3 class="member__name">Рихард Рети</h3>
                   <p class="member__rank">Чемпион мира по шахматам</p>
                   <a href="#" class="button button_size_s button_theme_info"
                     >Подробнее</a
@@ -335,12 +348,12 @@
                 <div class="decor decor_stamp member__photo-wrapper">
                   <img
                     src="./images/member.svg"
-                    alt="Участник Хозе-Рауль Капабланка"
+                    alt="Участник Остап Бендер"
                     class="member__photo"
                   />
                 </div>
                 <figcaption class="member__info">
-                  <h3 class="member__name">6 Остап Бендер</h3>
+                  <h3 class="member__name">Остап Бендер</h3>
                   <p class="member__rank">Гроссмейстер</p>
                   <a href="#" class="button button_size_s button_theme_info"
                     >Подробнее</a
@@ -353,12 +366,12 @@
                 <div class="decor decor_stamp member__photo-wrapper">
                   <img
                     src="./images/member.svg"
-                    alt="Участник Хозе-Рауль Капабланка"
+                    alt="Участник Тестовый Парень"
                     class="member__photo"
                   />
                 </div>
                 <figcaption class="member__info">
-                  <h3 class="member__name">7 Остап Бендер</h3>
+                  <h3 class="member__name">Тестовый Парень</h3>
                   <p class="member__rank">Гроссмейстер</p>
                   <a href="#" class="button button_size_s button_theme_info"
                     >Подробнее</a

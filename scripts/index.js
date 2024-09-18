@@ -270,6 +270,13 @@ document.addEventListener('DOMContentLoaded', function () {
             const btns = btnClasses.map(className => {
                 const btn = this.#renderButton();
                 btn.classList.add(className);
+
+                if (className === this.sliderButtonClassNameNext) {
+                    btn.setAttribute('aria-label', 'Следующий слайд')
+                } else {
+                    btn.setAttribute('aria-label', 'Предыдущий слайд')
+                }
+
                 return btn;
             });
 

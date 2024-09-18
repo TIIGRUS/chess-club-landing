@@ -37,6 +37,7 @@
     display: flex;
     gap: 16px;
     font-weight: 500;
+    font-size: 18px;
 }
 
 .stage__card-text::before {
@@ -144,6 +145,10 @@
     .stages__title {
         display: inline;
         vertical-align: middle;
+    }
+
+    .stage__card-text {
+        font-size: 20px;
     }
 
     .stages__subtitle {
