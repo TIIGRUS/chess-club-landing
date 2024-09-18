@@ -12,7 +12,7 @@
 }
 
 .stages__decor::before {
-    background-image: url(../../images/airplane.png);
+    background-image: url(../../images/airplane.webp);
     background-size: cover;
     width: 320px;
     height: 198px;

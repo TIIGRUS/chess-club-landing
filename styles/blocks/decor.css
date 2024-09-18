@@ -14,13 +14,13 @@
 }
 
 .decor_stamp::before {
-    background-image: url(../../images/stamp-paper.png);
+    background-image: url(../../images/stamp-paper.webp);
     content: '';
 }
 
 .decor::after {
     mix-blend-mode: color-burn;
     content: '';
-    background-image: url(../../images/decor-pattern.png);
+    background-image: url(../../images/decor-pattern.webp);
     z-index: 1;
 }
