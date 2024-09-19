@@ -1,5 +1,6 @@
 .rotation {
     animation: animation-rotation 20s linear infinite;
+    animation-delay: 1s;
 }
 
 @keyframes animation-rotation {

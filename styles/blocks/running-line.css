@@ -23,7 +23,7 @@
     white-space: nowrap;
     list-style: none;
     list-style-position: inside;
-    animation: 20s moving-right-left linear infinite;
+    animation: 30s moving-right-left linear infinite;
     padding-left: 100%;
 }
 

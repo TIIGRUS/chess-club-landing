@@ -13,6 +13,12 @@
     line-height: 108%;
     letter-spacing: 0.2px;
     grid-area: logo;
+    text-decoration: none;
+    transition: opacity 0.25s linear;
+}
+
+.logo:hover {
+    opacity: 0.8;
 }
 
 @media (min-width: 1300px) {
