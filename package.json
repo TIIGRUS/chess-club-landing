@@ -1,0 +1,10 @@
+{
+  "devDependencies": {
+    "@lhci/cli": "^0.15.1",
+    "husky": "^9.1.7"
+  },
+  "scripts": {
+    "lighthouse": "lhci autorun",
+    "prepare": "husky"
+  }
+}
