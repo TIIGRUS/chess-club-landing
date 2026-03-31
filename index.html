@@ -147,7 +147,7 @@
         role="img"
         aria-label="Композиция: На первом плане шахматная доска с двумя фигурами: коня и пешки. На втором плане идет застройка города. На заднем плане шахматные фигуры короля и королевы возвышающиеся на городом и вращающийся круг в виде солнца с лозунгом."
       >
-        <picture>
+        <picture aria-hidden="true">
           <source
             srcset="./images/header/composition-city-xl.webp"
             media="(min-width: 768px)"
@@ -161,7 +161,7 @@
             height="535"
           />
         </picture>
-        <picture>
+        <picture aria-hidden="true">
           <source
             srcset="./images/header/horse-figure.webp"
             media="(min-width: 1300px)"
@@ -179,11 +179,15 @@
           width="82"
           height="122"
           alt="Фигура шахматной пешки"
+          fetchpriority="high"
+          aria-hidden="true"
         />
         <img
           src="./images/header/circle.svg"
           class="header__circle rotation"
           alt="Вращающиеся круг в виде солнца с лозунгом"
+          fetchpriority="high"
+          aria-hidden="true"
         />
       </div>
       <div class="running-line header__running-line">
@@ -356,6 +360,7 @@
                     loading="lazy"
                     width="288"
                     height="288"
+                    aria-hidden="true"
                   />
                 </div>
                 <figcaption class="member__info">
@@ -377,6 +382,7 @@
                     loading="lazy"
                     width="288"
                     height="288"
+                    aria-hidden="true"
                   />
                 </div>
                 <figcaption class="member__info">
@@ -398,6 +404,7 @@
                     loading="lazy"
                     width="288"
                     height="288"
+                    aria-hidden="true"
                   />
                 </div>
                 <figcaption class="member__info">
@@ -419,6 +426,7 @@
                     loading="lazy"
                     width="288"
                     height="288"
+                    aria-hidden="true"
                   />
                 </div>
                 <figcaption class="member__info">
@@ -440,6 +448,7 @@
                     loading="lazy"
                     width="288"
                     height="288"
+                    aria-hidden="true"
                   />
                 </div>
                 <figcaption class="member__info">
@@ -461,6 +470,7 @@
                     loading="lazy"
                     width="288"
                     height="288"
+                    aria-hidden="true"
                   />
                 </div>
                 <figcaption class="member__info">
@@ -482,6 +492,7 @@
                     loading="lazy"
                     width="288"
                     height="288"
+                    aria-hidden="true"
                   />
                 </div>
                 <figcaption class="member__info">
