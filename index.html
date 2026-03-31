@@ -3,17 +3,55 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Шахматный турнир</title>
+    <title>Шахматный турнир в Васюках — Клуб четырех коней</title>
     <meta
       name="description"
-      content="Как поддержать шахматный турнир и превратить уездный город в столицу земного шара"
+      content="Участвуйте в Международном васюкинском шахматном турнире! Клуб четырех коней приглашает на уникальное событие. Поддержите турнир и узнайте подробности."
     />
     <meta
       name="keywords"
-      content="шахматы, турнир, васюкинский турнир, поддержать турнир"
+      content="шахматы, турнир, васюкинский турнир, поддержать турнир, клуб четырех коней, международный турнир, Васюки"
     />
     <meta name="author" content="Шевченко Владимир" />
     <meta name="robots" content="index, follow" />
+    <!-- Canonical -->
+    <link
+      rel="canonical"
+      href="https://tiigrus.github.io/chess-club-landing/"
+    />
+    <!-- Open Graph -->
+    <meta
+      property="og:title"
+      content="Шахматный турнир в Васюках — Клуб четырех коней"
+    />
+    <meta
+      property="og:description"
+      content="Участвуйте в Международном васюкинском шахматном турнире! Клуб четырех коней приглашает на уникальное событие. Поддержите турнир и узнайте подробности."
+    />
+    <meta
+      property="og:image"
+      content="https://tiigrus.github.io/chess-club-landing/images/intro/photo-game-chess.webp"
+    />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:url"
+      content="https://tiigrus.github.io/chess-club-landing/"
+    />
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Шахматный турнир в Васюках — Клуб четырех коней"
+    />
+    <meta
+      name="twitter:description"
+      content="Участвуйте в Международном васюкинском шахматном турнире! Клуб четырех коней приглашает на уникальное событие. Поддержите турнир и узнайте подробности."
+    />
+    <meta
+      name="twitter:image"
+      content="https://tiigrus.github.io/chess-club-landing/images/intro/photo-game-chess.webp"
+    />
+    <!-- Favicon -->
     <link rel="icon" href="./images/favicons/favicon.ico" sizes="any" />
     <link
       rel="apple-touch-icon"
@@ -25,9 +63,48 @@
       href="./images/favicons/favicon.svg"
       type="image/svg+xml"
     />
+    <link
+      rel="preload"
+      as="image"
+      href="./images/header/circle.svg"
+      type="image/svg+xml"
+    />
+    <!-- CSS -->
     <link rel="stylesheet" href="./vendor/fonts/fonts.css" />
     <link rel="stylesheet" href="./vendor/normalize.min.css" />
     <link rel="stylesheet" href="./styles/index.css" />
+    <!-- Schema.org JSON-LD: Organization & Event -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Клуб четырех коней",
+        "url": "https://tiigrus.github.io/chess-club-landing/",
+        "logo": "https://tiigrus.github.io/chess-club-landing/images/icons/logo.svg"
+      }
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Event",
+        "name": "Международный васюкинский турнир по шахматам",
+        "startDate": "1927-06-22T18:00",
+        "location": {
+          "@type": "Place",
+          "name": "Клуб Картонажник",
+          "address": "Васюки, Россия"
+        },
+        "image": [
+          "https://tiigrus.github.io/chess-club-landing/images/intro/photo-game-chess.webp"
+        ],
+        "description": "Участвуйте в Международном васюкинском шахматном турнире! Клуб четырех коней приглашает на уникальное событие.",
+        "organizer": {
+          "@type": "Organization",
+          "name": "Клуб четырех коней",
+          "url": "https://tiigrus.github.io/chess-club-landing/"
+        }
+      }
+    </script>
   </head>
   <body class="page">
     <header class="header decor page__section-colored">
