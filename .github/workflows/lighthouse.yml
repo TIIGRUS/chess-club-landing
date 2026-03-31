@@ -20,7 +20,11 @@ jobs:
         run: npm install
 
       - name: Run Lighthouse CI
+<<<<<<< HEAD
         uses: treosh/lighthouse-ci-action@v11
+=======
+        uses: treosh/lighthouse-ci-action@v12
+>>>>>>> f2d6c55 (feat: add Lighthouse CI configuration and workflow for performance monitoring)
         with:
           configPath: .lighthouserc.js
           uploadArtifacts: true
