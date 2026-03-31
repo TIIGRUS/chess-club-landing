@@ -17,6 +17,9 @@
     line-height: 130%;
     margin-block-end: 48px;
     overflow: hidden;
+    /* background-image: url(../../../images/header/Group\ 17.png);
+    background-repeat: no-repeat;
+    background-position: center 73%; */
 }
 
 @media (min-width: 768px) {
