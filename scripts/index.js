@@ -10,6 +10,10 @@ document.addEventListener('DOMContentLoaded', function () {
             dots = false,
             autoplay = false,
             delay = 4000,
+            controlsLabel = {
+                next: 'Следующий слайд',
+                prev: 'Предыдущий слайд',
+            }
         }) {
             // Props
             this.selector = selector;
@@ -18,7 +22,7 @@ document.addEventListener('DOMContentLoaded', function () {
             this.dots = dots;
             this.autoplay = autoplay;
             this.delay = delay;
-
+            this.controlsLabel = controlsLabel;
             // ClassNames
             this.sliderClassName = 'slider';
             this.sliderListClassName = `${this.sliderClassName}__list`;
@@ -272,9 +276,9 @@ document.addEventListener('DOMContentLoaded', function () {
                 btn.classList.add(className);
 
                 if (className === this.sliderButtonClassNameNext) {
-                    btn.setAttribute('aria-label', 'Следующий слайд')
+                    btn.setAttribute('aria-label', this.controlsLabel.next)
                 } else {
-                    btn.setAttribute('aria-label', 'Предыдущий слайд')
+                    btn.setAttribute('aria-label', this.controlsLabel.prev)
                 }
 
                 return btn;
@@ -354,12 +358,20 @@ document.addEventListener('DOMContentLoaded', function () {
     new Slider({
         selector: '#slider-stages',
         dots: true,
+        controlsLabel: {
+            prev: 'Предыдущая стадия',
+            next: 'Следующая стадия',
+        }
     });
 
     new Slider({
         selector: '#slider-members',
         autoplay: true,
-        isLoop: true
+        isLoop: true,
+        controlsLabel: {
+            prev: 'Предыдущий участник',
+            next: 'Следующий участник',
+        }
     });
 
     // Running Line

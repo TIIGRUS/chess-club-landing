@@ -58,7 +58,8 @@
 }
 
 .slider__button:focus-visible {
-    outline: 2px solid var(--slider-btn-bg-hover);
+    outline: 2px solid var(--slider-btn-focus-outline-color);
+    outline-offset: 3px;
 }
 
 .slider__button:disabled,

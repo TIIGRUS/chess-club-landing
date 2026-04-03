@@ -106,10 +106,13 @@
       }
     </script>
   </head>
-  <body class="page">
+  <body class="page" id="top">
+    <a class="skip-link button button_theme_dark" href="#main-content"
+      >Пропустить к содержанию</a
+    >
     <header class="header decor page__section-colored">
       <article class="header__content page__section">
-        <a class="logo" href="#">
+        <a class="logo" href="#top">
           <img
             src="./images/icons/logo.svg"
             class="logo__img"
@@ -219,7 +222,7 @@
         </ul>
       </div>
     </header>
-    <main class="content">
+    <main class="content" id="main-content">
       <section
         class="intro page__section"
         id="intro"
@@ -369,7 +372,8 @@
       </section>
       <section class="members page__section">
         <h2 class="main-title members__title">Участники турнира</h2>
-        <div class="slider" id="slider-members">
+        <div class="slider members__slider" id="slider-members">
+          <div class="slider__controls members__slider-controls"></div>
           <ul class="slider__list members__slider-list">
             <li>
               <figure class="slider__content member">
@@ -388,7 +392,12 @@
                 <figcaption class="member__info">
                   <h3 class="member__name">Хозе-Рауль Капабланка</h3>
                   <p class="member__rank">Чемпион мира по шахматам</p>
-                  <a href="#" class="button button_size_s button_theme_info"
+                  <a
+                    href="https://ru.wikipedia.org/wiki/Капабланка,_Хосе_Рауль"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="button button_size_s button_theme_info"
+                    aria-label="Подробнее о Хозе-Рауле Капабланке (откроется в новой вкладке)"
                     >Подробнее</a
                   >
                 </figcaption>
@@ -411,7 +420,12 @@
                 <figcaption class="member__info">
                   <h3 class="member__name">Эммануил Ласкер</h3>
                   <p class="member__rank">Чемпион мира по шахматам</p>
-                  <a href="#" class="button button_size_s button_theme_info"
+                  <a
+                    href="https://ru.wikipedia.org/wiki/Ласкер,_Эммануил"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="button button_size_s button_theme_info"
+                    aria-label="Подробнее об Эммануиле Ласкере (откроется в новой вкладке)"
                     >Подробнее</a
                   >
                 </figcaption>
@@ -434,7 +448,12 @@
                 <figcaption class="member__info">
                   <h3 class="member__name">Александр Алехин</h3>
                   <p class="member__rank">Чемпион мира по шахматам</p>
-                  <a href="#" class="button button_size_s button_theme_info"
+                  <a
+                    href="https://ru.wikipedia.org/wiki/Алехин,_Александр"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="button button_size_s button_theme_info"
+                    aria-label="Подробнее об Александре Алехине (откроется в новой вкладке)"
                     >Подробнее</a
                   >
                 </figcaption>
@@ -457,7 +476,12 @@
                 <figcaption class="member__info">
                   <h3 class="member__name">Арон Нимцович</h3>
                   <p class="member__rank">Чемпион мира по шахматам</p>
-                  <a href="#" class="button button_size_s button_theme_info"
+                  <a
+                    href="https://ru.wikipedia.org/wiki/Нимцович,_Арон"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="button button_size_s button_theme_info"
+                    aria-label="Подробнее об Ароне Нимцовиче (откроется в новой вкладке)"
                     >Подробнее</a
                   >
                 </figcaption>
@@ -480,7 +504,12 @@
                 <figcaption class="member__info">
                   <h3 class="member__name">Рихард Рети</h3>
                   <p class="member__rank">Чемпион мира по шахматам</p>
-                  <a href="#" class="button button_size_s button_theme_info"
+                  <a
+                    href="https://ru.wikipedia.org/wiki/Рети,_Рихард"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="button button_size_s button_theme_info"
+                    aria-label="Подробнее о Рихарде Рети (откроется в новой вкладке)"
                     >Подробнее</a
                   >
                 </figcaption>
@@ -503,7 +532,12 @@
                 <figcaption class="member__info">
                   <h3 class="member__name">Остап Бендер</h3>
                   <p class="member__rank">Гроссмейстер</p>
-                  <a href="#" class="button button_size_s button_theme_info"
+                  <a
+                    href="https://ru.wikipedia.org/wiki/Остап_Бендер"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="button button_size_s button_theme_info"
+                    aria-label="Подробнее об Остапе Бендере (откроется в новой вкладке)"
                     >Подробнее</a
                   >
                 </figcaption>
@@ -514,7 +548,7 @@
                 <div class="decor decor_stamp member__photo-wrapper">
                   <img
                     src="./images/member.svg"
-                    alt="Участник Тестовый Парень"
+                    alt="Участник John Doe"
                     class="member__photo"
                     loading="lazy"
                     width="288"
@@ -524,16 +558,20 @@
                   />
                 </div>
                 <figcaption class="member__info">
-                  <h3 class="member__name">Тестовый Парень</h3>
+                  <h3 class="member__name">John Doe</h3>
                   <p class="member__rank">Гроссмейстер</p>
-                  <a href="#" class="button button_size_s button_theme_info"
+                  <a
+                    href="https://en.wikipedia.org/wiki/John_Doe"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="button button_size_s button_theme_info"
+                    aria-label="Подробнее о John Doe (откроется в новой вкладке)"
                     >Подробнее</a
                   >
                 </figcaption>
               </figure>
             </li>
           </ul>
-          <div class="slider__controls members__slider-controls"></div>
         </div>
       </section>
     </main>

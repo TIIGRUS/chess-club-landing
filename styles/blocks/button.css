@@ -17,6 +17,11 @@
     transition: all 0.25s ease;
 }
 
+.button:focus-visible {
+    outline: 3px solid var(--btn-focus-outline-color);
+    outline-offset: 4px;
+}
+
 .button_theme_dark {
     background-color: var(--btn-dark-bg);
     color: var(--btn-dark-color);

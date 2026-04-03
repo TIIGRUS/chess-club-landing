@@ -4,15 +4,14 @@
     margin-block: 40px;
 }
 
-/* @media (max-width: 767px) {
-    .members__slider-list {
-        display: flex;
-    }
+.members__slider {
+    display: flex;
+    flex-direction: column;
+}
 
-    .members__slider-list .slider__item {
-        flex: 1 0 100%;
-    }
-} */
+.members__slider-controls {
+    order: 2;
+}
 
 @media (min-width: 768px) {
     .members__slider-list {
