@@ -111,7 +111,7 @@
       >Пропустить к содержанию</a
     >
     <header class="header decor page__section-colored">
-      <article class="header__content page__section">
+      <div class="header__content page__section">
         <a class="logo" href="#top">
           <img
             src="./images/icons/logo.svg"
@@ -144,7 +144,7 @@
             Подробнее о турнире
           </a>
         </nav>
-      </article>
+      </div>
       <div
         class="header__composition"
         role="img"
@@ -208,7 +208,7 @@
           aria-hidden="true"
         /> -->
       </div>
-      <div class="running-line header__running-line">
+      <div class="running-line header__running-line" aria-hidden="true">
         <ul class="running-line__list">
           <li class="running-line__list-item">
             Дело помощи утопающим — дело рук самих утопающих!
@@ -269,31 +269,30 @@
           >
           гроссмейстера О. Бендера
         </h3>
-        <ul class="intro__list" id="about">
-          <li class="intro__list-item">
-            Место проведения:
-            <span class="intro__list-accent">Клуб «Картонажник»</span>
-          </li>
-          <li class="intro__list-item">
-            Дата и время мероприятия:
-            <span class="intro__list-accent">22 июня 1927 г. в 18:00</span>
-          </li>
-          <li class="intro__list-item">
-            Стоимость входных билетов:
-            <span class="intro__list-accent">20 коп.</span>
-          </li>
-          <li class="intro__list-item">
-            Плата за игру:
-            <span class="intro__list-accent">50 коп.</span>
-          </li>
-          <li class="intro__list-item">
-            Взнос на телеграммы:
-            <span class="intro__list-accent"
-              ><span class="intro__text-crossed">100 руб.</span> 21 руб. 16
-              коп.</span
-            >
-          </li>
-        </ul>
+        <dl class="intro__list">
+          <div class="intro__list-item">
+            <dt>Место проведения:</dt>
+            <dd class="intro__list-accent">Клуб «Картонажник»</dd>
+          </div>
+          <div class="intro__list-item">
+            <dt>Дата и время мероприятия:</dt>
+            <dd class="intro__list-accent">22 июня 1927 г. в 18:00</dd>
+          </div>
+          <div class="intro__list-item">
+            <dt>Стоимость входных билетов:</dt>
+            <dd class="intro__list-accent">20 коп.</dd>
+          </div>
+          <div class="intro__list-item">
+            <dt>Плата за игру:</dt>
+            <dd class="intro__list-accent">50 коп.</dd>
+          </div>
+          <div class="intro__list-item">
+            <dt>Взнос на телеграммы:</dt>
+            <dd class="intro__list-accent">
+              <span class="intro__text-crossed">100 руб.</span> 21 руб. 16 коп.
+            </dd>
+          </div>
+        </dl>
         <p class="content__info-text intro__info">
           По всем вопросам обращаться в администрацию к К. Михельсону
         </p>
@@ -374,8 +373,10 @@
           ></div>
         </div>
       </section>
-      <section class="members page__section">
-        <h2 class="main-title members__title">Участники турнира</h2>
+      <section class="members page__section" aria-labelledby="members-title">
+        <h2 class="main-title members__title" id="members-title">
+          Участники турнира
+        </h2>
         <div class="slider members__slider" id="slider-members">
           <div
             class="slider__controls members__slider-controls"
@@ -584,7 +585,7 @@
       </section>
     </main>
     <footer class="footer page__section-colored">
-      <div class="running-line footer__running-line">
+      <div class="running-line footer__running-line" aria-hidden="true">
         <ul class="running-line__list">
           <li class="running-line__list-item">
             Дело помощи утопающим — дело рук самих утопающих!
