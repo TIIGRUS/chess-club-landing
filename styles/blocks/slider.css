@@ -8,7 +8,12 @@
     display: grid;
     gap: var(--slider-gap-between-items);
     grid-template-columns: repeat(1, 100%);
-    transition: transform 0.3s ease;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .slider__list {
+        transition: transform 0.3s ease;
+    }
 }
 
 .slider__item {
