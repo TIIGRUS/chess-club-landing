@@ -106,10 +106,13 @@
       }
     </script>
   </head>
-  <body class="page">
+  <body class="page" id="top">
+    <a class="skip-link button button_theme_dark" href="#main-content"
+      >Пропустить к содержанию</a
+    >
     <header class="header decor page__section-colored">
-      <article class="header__content page__section">
-        <a class="logo" href="#">
+      <div class="header__content page__section">
+        <a class="logo" href="#top">
           <img
             src="./images/icons/logo.svg"
             class="logo__img"
@@ -137,11 +140,11 @@
           <a href="#intro" class="button button_theme_dark">
             Поддержать шахматную мысль
           </a>
-          <a href="#about" class="button button_theme_light">
+          <a href="#stages" class="button button_theme_light">
             Подробнее о турнире
           </a>
         </nav>
-      </article>
+      </div>
       <div
         class="header__composition"
         role="img"
@@ -205,7 +208,7 @@
           aria-hidden="true"
         /> -->
       </div>
-      <div class="running-line header__running-line">
+      <div class="running-line header__running-line" aria-hidden="true">
         <ul class="running-line__list">
           <li class="running-line__list-item">
             Дело помощи утопающим — дело рук самих утопающих!
@@ -219,7 +222,7 @@
         </ul>
       </div>
     </header>
-    <main class="content">
+    <main class="content" id="main-content">
       <section
         class="intro page__section"
         id="intro"
@@ -266,36 +269,39 @@
           >
           гроссмейстера О. Бендера
         </h3>
-        <ul class="intro__list" id="about">
-          <li class="intro__list-item">
-            Место проведения:
-            <span class="intro__list-accent">Клуб «Картонажник»</span>
-          </li>
-          <li class="intro__list-item">
-            Дата и время мероприятия:
-            <span class="intro__list-accent">22 июня 1927 г. в 18:00</span>
-          </li>
-          <li class="intro__list-item">
-            Стоимость входных билетов:
-            <span class="intro__list-accent">20 коп.</span>
-          </li>
-          <li class="intro__list-item">
-            Плата за игру:
-            <span class="intro__list-accent">50 коп.</span>
-          </li>
-          <li class="intro__list-item">
-            Взнос на телеграммы:
-            <span class="intro__list-accent"
-              ><span class="intro__text-crossed">100 руб.</span> 21 руб. 16
-              коп.</span
-            >
-          </li>
-        </ul>
+        <dl class="intro__list">
+          <div class="intro__list-item">
+            <dt>Место проведения:</dt>
+            <dd class="intro__list-accent">Клуб «Картонажник»</dd>
+          </div>
+          <div class="intro__list-item">
+            <dt>Дата и время мероприятия:</dt>
+            <dd class="intro__list-accent">22 июня 1927 г. в 18:00</dd>
+          </div>
+          <div class="intro__list-item">
+            <dt>Стоимость входных билетов:</dt>
+            <dd class="intro__list-accent">20 коп.</dd>
+          </div>
+          <div class="intro__list-item">
+            <dt>Плата за игру:</dt>
+            <dd class="intro__list-accent">50 коп.</dd>
+          </div>
+          <div class="intro__list-item">
+            <dt>Взнос на телеграммы:</dt>
+            <dd class="intro__list-accent">
+              <span class="intro__text-crossed">100 руб.</span> 21 руб. 16 коп.
+            </dd>
+          </div>
+        </dl>
         <p class="content__info-text intro__info">
           По всем вопросам обращаться в администрацию к К. Михельсону
         </p>
       </section>
-      <section class="stages page__section" aria-labelledby="stages-title">
+      <section
+        class="stages page__section"
+        aria-labelledby="stages-title"
+        id="stages"
+      >
         <header class="content__section-intro stages__intro">
           <h2 class="main-title stages__title" id="stages-title">
             Этапы преображения Васюков
@@ -360,12 +366,23 @@
               </article>
             </div>
           </div>
-          <div class="slider__controls stages__slider-controls"></div>
+          <div
+            class="slider__controls stages__slider-controls"
+            role="group"
+            aria-label="Управление слайдером этапов"
+          ></div>
         </div>
       </section>
-      <section class="members page__section">
-        <h2 class="main-title members__title">Участники турнира</h2>
-        <div class="slider" id="slider-members">
+      <section class="members page__section" aria-labelledby="members-title">
+        <h2 class="main-title members__title" id="members-title">
+          Участники турнира
+        </h2>
+        <div class="slider members__slider" id="slider-members">
+          <div
+            class="slider__controls members__slider-controls"
+            role="group"
+            aria-label="Управление слайдером участников"
+          ></div>
           <ul class="slider__list members__slider-list">
             <li>
               <figure class="slider__content member">
@@ -384,7 +401,12 @@
                 <figcaption class="member__info">
                   <h3 class="member__name">Хозе-Рауль Капабланка</h3>
                   <p class="member__rank">Чемпион мира по шахматам</p>
-                  <a href="#" class="button button_size_s button_theme_info"
+                  <a
+                    href="https://ru.wikipedia.org/wiki/Капабланка,_Хосе_Рауль"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="button button_size_s button_theme_info"
+                    aria-label="Подробнее о Хозе-Рауле Капабланке (откроется в новой вкладке)"
                     >Подробнее</a
                   >
                 </figcaption>
@@ -407,7 +429,12 @@
                 <figcaption class="member__info">
                   <h3 class="member__name">Эммануил Ласкер</h3>
                   <p class="member__rank">Чемпион мира по шахматам</p>
-                  <a href="#" class="button button_size_s button_theme_info"
+                  <a
+                    href="https://ru.wikipedia.org/wiki/Ласкер,_Эммануил"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="button button_size_s button_theme_info"
+                    aria-label="Подробнее об Эммануиле Ласкере (откроется в новой вкладке)"
                     >Подробнее</a
                   >
                 </figcaption>
@@ -430,7 +457,12 @@
                 <figcaption class="member__info">
                   <h3 class="member__name">Александр Алехин</h3>
                   <p class="member__rank">Чемпион мира по шахматам</p>
-                  <a href="#" class="button button_size_s button_theme_info"
+                  <a
+                    href="https://ru.wikipedia.org/wiki/Алехин,_Александр"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="button button_size_s button_theme_info"
+                    aria-label="Подробнее об Александре Алехине (откроется в новой вкладке)"
                     >Подробнее</a
                   >
                 </figcaption>
@@ -453,7 +485,12 @@
                 <figcaption class="member__info">
                   <h3 class="member__name">Арон Нимцович</h3>
                   <p class="member__rank">Чемпион мира по шахматам</p>
-                  <a href="#" class="button button_size_s button_theme_info"
+                  <a
+                    href="https://ru.wikipedia.org/wiki/Нимцович,_Арон"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="button button_size_s button_theme_info"
+                    aria-label="Подробнее об Ароне Нимцовиче (откроется в новой вкладке)"
                     >Подробнее</a
                   >
                 </figcaption>
@@ -476,7 +513,12 @@
                 <figcaption class="member__info">
                   <h3 class="member__name">Рихард Рети</h3>
                   <p class="member__rank">Чемпион мира по шахматам</p>
-                  <a href="#" class="button button_size_s button_theme_info"
+                  <a
+                    href="https://ru.wikipedia.org/wiki/Рети,_Рихард"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="button button_size_s button_theme_info"
+                    aria-label="Подробнее о Рихарде Рети (откроется в новой вкладке)"
                     >Подробнее</a
                   >
                 </figcaption>
@@ -499,7 +541,12 @@
                 <figcaption class="member__info">
                   <h3 class="member__name">Остап Бендер</h3>
                   <p class="member__rank">Гроссмейстер</p>
-                  <a href="#" class="button button_size_s button_theme_info"
+                  <a
+                    href="https://ru.wikipedia.org/wiki/Остап_Бендер"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="button button_size_s button_theme_info"
+                    aria-label="Подробнее об Остапе Бендере (откроется в новой вкладке)"
                     >Подробнее</a
                   >
                 </figcaption>
@@ -510,7 +557,7 @@
                 <div class="decor decor_stamp member__photo-wrapper">
                   <img
                     src="./images/member.svg"
-                    alt="Участник Тестовый Парень"
+                    alt="Участник Джон Доу"
                     class="member__photo"
                     loading="lazy"
                     width="288"
@@ -520,21 +567,25 @@
                   />
                 </div>
                 <figcaption class="member__info">
-                  <h3 class="member__name">Тестовый Парень</h3>
+                  <h3 class="member__name">Джон Доу</h3>
                   <p class="member__rank">Гроссмейстер</p>
-                  <a href="#" class="button button_size_s button_theme_info"
+                  <a
+                    href="https://ru.wikipedia.org/wiki/%D0%94%D0%B6%D0%BE%D0%BD_%D0%94%D0%BE%D1%83"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="button button_size_s button_theme_info"
+                    aria-label="Подробнее о Джоне Доу (откроется в новой вкладке)"
                     >Подробнее</a
                   >
                 </figcaption>
               </figure>
             </li>
           </ul>
-          <div class="slider__controls members__slider-controls"></div>
         </div>
       </section>
     </main>
     <footer class="footer page__section-colored">
-      <div class="running-line footer__running-line">
+      <div class="running-line footer__running-line" aria-hidden="true">
         <ul class="running-line__list">
           <li class="running-line__list-item">
             Дело помощи утопающим — дело рук самих утопающих!

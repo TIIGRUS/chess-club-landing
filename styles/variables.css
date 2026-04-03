@@ -30,6 +30,7 @@
     /* Buttons */
     --btn-border-color: var(--black-color);
     --btn-font: var(--main-font);
+    --btn-focus-outline-color: var(--black-color);
     /* Button dark */
     --btn-dark-bg: var(--black-color);
     --btn-dark-hover-bg: var(--yellow-color);
@@ -48,6 +49,7 @@
     --slider-btn-bg: var(--dark-gray-color);
     --slider-btn-bg-disabled: #D6D6D6;
     --slider-btn-bg-hover: var(--yellow-color);
+    --slider-btn-focus-outline-color: var(--black-color);
     --slider-dot-bg: #D9D9D9;
     --slider-counter-text-color: var(--gray-color);
     --slider-gap-between-items: 20px;

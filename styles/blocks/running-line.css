@@ -23,8 +23,6 @@
     white-space: nowrap;
     list-style: none;
     list-style-position: inside;
-    animation: 30s moving-right-left linear infinite;
-    padding-left: 100%;
 }
 
 .running-line__list-item {
@@ -47,5 +45,13 @@
     .running-line__list {
         font-size: 22px;
         padding-block: 18px;
+    }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .running-line__list {
+        animation: 30s moving-right-left linear infinite;
+        padding-left: 100%;
+
     }
 }

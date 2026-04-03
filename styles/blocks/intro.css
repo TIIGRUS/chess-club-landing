@@ -45,6 +45,8 @@
     color: var(--light-gray-color);
     display: grid;
     gap: 0 16px;
+    padding: 0;
+    margin: 0;
 }
 
 .intro__list-item {
@@ -71,6 +73,7 @@
     color: var(--dark-gray-color);
     display: inline-flex;
     gap: 12px;
+    margin: 0;
 }
 
 .intro__text-crossed {
